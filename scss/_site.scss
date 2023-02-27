@@ -1,0 +1,19 @@
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'JetBrains Mono', monospace;
+    background-color: $color-bg-white;
+    color: $color-black;
+    margin: 0;
+    cursor: crosshair;
+}
+
+
+@font-face {
+    font-family: 'Hiragino-sans';
+    src: url('/fonts/Hiragino-sans.woff') format('woff'),
+         url('/fonts/Hiragino-sans.woff2') format('woff2');
+  }

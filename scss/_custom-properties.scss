@@ -1,0 +1,24 @@
+
+// Colors
+$color-white: #FFFFFF;
+$color-beige: #E5E1DB;
+$color-yellow: #EFFF3D;
+$color-green: #00FF40;
+$color-black: #0F0F0F;
+
+//Color implementation
+$color-bg-white: $color-white;
+$color-bg-beige: $color-beige;
+$color-bg-yellow: $color-yellow;
+$color-bg-green: $color-green;
+$color-bg-black: $color-black;
+
+
+
+:root {
+    --color-white: $color-white;
+    --color-beige: $color-beige;
+    --color-yellow: $color-yellow;
+    --color-green: $color-green;
+    --color-black: $color-black;
+}
