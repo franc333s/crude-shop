@@ -1,0 +1,102 @@
+:root {
+  --color-white: $color-white;
+  --color-beige: $color-beige;
+  --color-yellow: $color-yellow;
+  --color-green: $color-green;
+  --color-black: $color-black;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "JetBrains Mono", monospace;
+  background-color: #FFFFFF;
+  color: #0F0F0F;
+  margin: 0;
+  cursor: crosshair;
+}
+
+a {
+  text-decoration: none;
+  color: #0F0F0F;
+}
+
+a:visited {
+  color: #0F0F0F;
+}
+
+.topbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  background-color: #E5E1DB;
+  border-bottom: 2px #0F0F0F solid;
+  list-style: none;
+  text-transform: uppercase;
+  border-bottom: 2px #0F0F0F solid;
+  font-size: 1.6rem;
+}
+
+.topbar--mobile {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.2rem 2rem;
+}
+.topbar--mobile__menu {
+  background-color: red;
+}
+.topbar--mobile__cart {
+  background-color: yellow;
+}
+@media all and (min-width: 900px) {
+  .topbar--mobile {
+    display: none;
+  }
+}
+
+.topbar--desktop {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.6rem 4rem;
+}
+.topbar--desktop__nav {
+  background-color: orange;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.topbar--desktop__nav__item {
+  padding: 0 2.4rem;
+}
+@media all and (min-width: 1440px) {
+  .topbar--desktop {
+    padding: 1.6rem 8rem;
+    background-color: red;
+  }
+}
+@media all and (min-width: 1920px) {
+  .topbar--desktop {
+    padding: 1.6rem 10rem;
+    background-color: blue;
+  }
+}
+@media all and (max-width: 899px) {
+  .topbar--desktop {
+    display: none;
+  }
+}
