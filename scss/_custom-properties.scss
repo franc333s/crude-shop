@@ -13,6 +13,10 @@ $color-bg-yellow: $color-yellow;
 $color-bg-green: $color-green;
 $color-bg-black: $color-black;
 
+// Fronts
+$font-primary: 'Epilogue';
+$font-secondary: 'JetBrains Mono';
+
 
 
 :root {
@@ -21,4 +25,9 @@ $color-bg-black: $color-black;
     --color-yellow: $color-yellow;
     --color-green: $color-green;
     --color-black: $color-black;
+
+
 }
+
+
+// cargarse las custom properties y llamar a este archivo variables sass.

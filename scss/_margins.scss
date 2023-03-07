@@ -1,0 +1,50 @@
+// Mediaqueries
+$bp-small: 390px;
+$bp-medium: 760px;
+$bp-large: 1440px;
+$bp-xlarge: 1920px;
+
+// cambiar media queries a tamaño en rem -> se tiene que dividir entre 16px igualmente
+// por mucho que hayamos modificado el tamaño de la fuente en el root
+
+
+@mixin mq($bp: $bp-medium, $bp-width: min-width) {
+    @media all and ($bp-width: $bp) {
+        @content;
+    }
+}
+
+
+
+.main-padding {
+    background-color: pink;
+    padding: 8rem 2rem;
+
+    @include mq($bp-medium) {
+        //min width 900
+        padding: 8rem 4rem;
+    }
+
+    @include mq($bp-large) {
+        //min width 1440
+        padding: 8rem;
+        background-color: red;
+    }
+
+    @include mq($bp-xlarge) {
+        //min width 1920
+        padding: 8rem 10rem;
+        background-color: olivedrab;
+    }
+}
+
+.hero-padding {
+    background-color: lightcoral;
+    padding: 4rem 2rem;
+
+    @media all and (max-width: 1400px) and (min-width: 760px) {
+        padding: 4rem;
+    }
+    // revisar esta media i vore si se pot 
+}
+
