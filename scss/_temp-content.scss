@@ -1,0 +1,51 @@
+// Mediaqueries
+$bp-small: 24rem; // 384px 
+$bp-medium: 768px;
+$bp-large: 90rem; // 1440px
+$bp-xlarge: 120rem; // 1920px
+
+@mixin mq($bp: $bp-medium, $bp-width: min-width) {
+    @media all and ($bp-width: $bp) {
+        @content;
+    }
+}
+
+
+
+figure {
+    margin: 0;
+}
+
+article {
+    margin: 0;
+}
+
+.products__item {
+
+}
+.products__item__img {
+    object-fit: cover;
+    width: 100%;
+    margin-bottom: 2rem;
+
+    @include mq($bp-medium) {
+        height: 68rem;
+    }
+
+
+}
+
+
+
+
+.products {
+
+    @include mq($bp-medium) {
+        //min width 768px
+        display: flex;
+        gap: 2rem;
+
+
+    }
+
+}

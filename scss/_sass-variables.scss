@@ -1,0 +1,44 @@
+
+// Colors
+$color-white: #FFFFFF;
+$color-beige: #E5E1DB;
+$color-yellow: #EFFF3D;
+$color-green: #00FF40;
+$color-black: #0F0F0F;
+
+//Color implementation
+$color-bg-white: $color-white;
+$color-bg-beige: $color-beige;
+$color-bg-yellow: $color-yellow;
+$color-bg-green: $color-green;
+$color-bg-black: $color-black;
+
+//Units
+$unit-base: 0.4rem;
+
+//Viewports
+$vw-100: 100vw;
+$vh-100: 100vh;
+
+
+//Units implementation in margins and paddings
+
+
+
+    /* Units implementation */
+   // --unit-sm: calc(.5 * var(--unit-base)); // 1.5
+   // --unit-md: calc(2 * var(--unit-base)); // 6
+  //  --unit-lg: calc(3 * var(--unit-base)); // 9
+  //  --unit-xl: calc(4 * var(--unit-base)); // 12
+//--unit-xxl:calc(5 * var(--unit-base)); // 15
+  //  --unit-xxxl: calc(6 * var(--unit-base)); // 18
+
+
+
+
+// Fronts
+$font-primary: 'Epilogue';
+$font-secondary: 'JetBrains Mono';
+
+
+

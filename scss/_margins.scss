@@ -1,12 +1,8 @@
 // Mediaqueries
-$bp-small: 390px;
-$bp-medium: 760px;
-$bp-large: 1440px;
-$bp-xlarge: 1920px;
-
-// cambiar media queries a tamaño en rem -> se tiene que dividir entre 16px igualmente
-// por mucho que hayamos modificado el tamaño de la fuente en el root
-
+$bp-small: 24rem; // 384px 
+$bp-medium: 768px;
+$bp-large: 90rem; // 1440px
+$bp-xlarge: 120rem; // 1920px
 
 @mixin mq($bp: $bp-medium, $bp-width: min-width) {
     @media all and ($bp-width: $bp) {
@@ -21,7 +17,7 @@ $bp-xlarge: 1920px;
     padding: 8rem 2rem;
 
     @include mq($bp-medium) {
-        //min width 900
+        //min width 768px
         padding: 8rem 4rem;
     }
 
@@ -42,7 +38,7 @@ $bp-xlarge: 1920px;
     background-color: lightcoral;
     padding: 4rem 2rem;
 
-    @media all and (max-width: 1400px) and (min-width: 760px) {
+    @media all and (max-width: 1440px) and (min-width: 768px) {
         padding: 4rem;
     }
     // revisar esta media i vore si se pot 

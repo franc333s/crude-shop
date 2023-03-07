@@ -1,5 +1,5 @@
-// Custom properties
-@import "custom-properties";
+// Sass variables
+@import "sass-variables";
 
 // Site properties
 @import "site";
@@ -22,6 +22,9 @@
 
 // Buttons and links
 @import "buttons";
+
+// CONTENIDO TEMPORAL PARA REPARTIR EN OTROS ARHCIVOS
+@import "temp-content";
 
 // Footer styles
 @import "footer";
