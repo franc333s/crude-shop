@@ -1,15 +1,30 @@
+// Mediaqueries
+$bp-small: 24rem; // 384px 
+$bp-medium: 768px;
+$bp-large: 90rem; // 1440px
+$bp-xlarge: 120rem; // 1920px
+
+@mixin mq($bp: $bp-medium, $bp-width: min-width) {
+    @media all and ($bp-width: $bp) {
+        @content;
+    }
+}
+
 p {
   margin: 0;
 }
 
+.main--p {
+  font-size: 2rem;
+  padding-bottom: 4rem;
 
-.hero-text {
-  font-family: $font-primary;
-  font-size: 2.8rem;
-  line-height: 120%;
+  @include mq($bp-large) {
+    padding-bottom: 0;
+  }
 }
 
-.font-family-secondary {
+
+.font-family--secondary {
   font-family: $font-secondary;
   font-style: italic;
   font-weight: 800;
@@ -17,8 +32,37 @@ p {
 
 
 
-// Sacar a utilities
+// Utilities applied to the hero's typography
+// esto iria en utilities
+.hero__title {
+  font-family: $font-primary;
+  font-size: 1.4rem;
+  padding-top: 0.8rem;
 
-.color--green {
-  color: $color-green;
 }
+
+.hero__subtitle {
+  font-size: 2.8rem;
+  font-weight: 300;
+  
+}
+
+.hero__text {
+  font-family: $font-primary;
+  font-size: 2.8rem;
+  line-height: 140%;
+
+  @include mq($bp-large) {
+    font-size: 3.6rem;
+    column-count: 2;
+    column-gap: 4rem;
+    column-fill: balance;
+  }
+
+  @include mq($bp-xlarge) {
+    font-size: 4.4rem;
+  }
+}
+
+
+//

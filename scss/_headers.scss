@@ -1,11 +1,40 @@
+// Mediaqueries
+$bp-small: 24rem; // 384px 
+$bp-medium: 768px;
+$bp-large: 90rem; // 1440px
+$bp-xlarge: 120rem; // 1920px
+
+@mixin mq($bp: $bp-medium, $bp-width: min-width) {
+    @media all and ($bp-width: $bp) {
+        @content;
+    }
+}
+
 h1,
 h2,
-h3 {
+h3,
+h4 {
   margin: 0;
 }
 
 
-h1 {
+h2,
+.h2 {
+  font-family: $font-primary;
+  font-size: 3.6rem;
+  padding-bottom: 1.6rem;
+
+  @include mq($bp-medium) {
+    font-size: 2.8rem;
+  }
+
+  @include mq($bp-large) {
+    font-size: 3.6rem;
+  }
+
+  @include mq($bp-xlarge) {
+    font-size: 4.4rem;
+  }
 
 }
 

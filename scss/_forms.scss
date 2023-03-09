@@ -1,0 +1,58 @@
+// Mediaqueries
+$bp-small: 24rem; // 384px 
+$bp-medium: 768px;
+$bp-large: 90rem; // 1440px
+$bp-xlarge: 120rem; // 1920px
+
+@mixin mq($bp: $bp-medium, $bp-width: min-width) {
+    @media all and ($bp-width: $bp) {
+        @content;
+    }
+}
+
+
+// Newsletter suscription
+
+[placeholder="EMAIL"] {
+    color: $color-beige;
+	background: none;
+    border: 2px solid $color-beige;
+	border-top: none;
+    border-left: none;
+    border-right: none;
+	// -webkit-appearance: none;
+	// -moz-appearance: none;
+	// appearance: none;
+    margin-top: 2.8rem;
+    margin-bottom: 2.8rem;
+    padding: 1.4rem 0;
+    width: 100%;
+
+
+
+    &:focus {
+        background-color: transparent;
+        color: $color-beige;
+        font-family: $font-secondary;
+        font-size: $font-size-small;
+        outline: none;
+    }
+
+    &::placeholder {
+        color: $color-beige;
+        font-family: $font-secondary;
+        font-size: $font-size-small;
+    }
+    &:-ms-input-placeholder {
+        color: $color-beige;
+        font-family: $font-secondary;
+        font-size: $font-size-small;
+    }
+
+    @include mq($bp-medium) {
+        //min width 768px
+        width: 45%;
+        margin-right: 4rem;
+
+    }
+}

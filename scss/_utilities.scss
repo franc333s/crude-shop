@@ -1,0 +1,30 @@
+//Font colors
+
+.color--beige {
+    color: $color-beige;
+
+    &:visited {
+        color: $color-beige;
+    }
+
+}
+
+.color--green {
+    color: $color-green;
+}
+
+.text-transform--initial {
+    text-transform: initial;
+}
+
+.font-size-small {
+    font-size: $font-size-small;
+}
+
+
+.boder-bottom--solid {
+    border: calc($unit-base / 2) solid $color-beige;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+}

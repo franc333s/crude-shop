@@ -1,9 +1,97 @@
+// Mediaqueries
+$bp-small: 24rem; // 384px 
+$bp-medium: 768px;
+$bp-large: 90rem; // 1440px
+$bp-xlarge: 120rem; // 1920px
+
+@mixin mq($bp: $bp-medium, $bp-width: min-width) {
+    @media all and ($bp-width: $bp) {
+        @content;
+    }
+}
+
 .footer {
     background-color: $color-bg-black;
     color: $color-beige;
-}
-
-.footer__innner-section {
+    text-align: center;
     font-size: 2rem;
+    text-transform: uppercase;
+
+    @include mq($bp-medium) {
+        //min width 768px
+        &__logo {
+            max-width: 6rem;
+            max-height: 4rem;
+        }
+    }
 
 }
+
+.footer__element {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.6rem;
+
+    padding: 8rem 2rem;
+    
+
+    @include mq($bp-medium) {
+        //min width 768px
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0;
+
+        padding: 2rem 4rem;
+    }
+
+    @include mq($bp-large) {
+        //min width 1440
+        padding: 2rem 8rem;
+    }
+
+    @include mq($bp-large) {
+        //min width 1920
+        padding: 2rem 10rem;
+    }
+}
+
+
+
+.footer__element--variation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.6rem;
+
+    padding: 8rem 2rem;
+
+    @include mq($bp-medium) {
+        //min width 768px
+        padding: 4rem;
+    }
+
+    @include mq($bp-large) {
+        //min width 1440
+        padding: 4rem 8rem;
+    }
+
+    @include mq($bp-large) {
+        //min width 1920
+        padding: 6rem 10rem;
+    }
+
+}
+
+
+.footer__input-button {
+
+    @include mq($bp-medium) {
+        //min width 768px
+        display: inline-block;
+         
+    }
+
+}
+

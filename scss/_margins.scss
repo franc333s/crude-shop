@@ -10,9 +10,13 @@ $bp-xlarge: 120rem; // 1920px
     }
 }
 
+figure,
+article, 
+section {
+    margin: 0;
+}
 
-
-.main-padding {
+.main--padding {
     background-color: pink;
     padding: 8rem 2rem;
 
@@ -34,13 +38,24 @@ $bp-xlarge: 120rem; // 1920px
     }
 }
 
-.hero-padding {
+.hero--padding {
     background-color: lightcoral;
     padding: 4rem 2rem;
 
     @media all and (max-width: 1440px) and (min-width: 768px) {
         padding: 4rem;
     }
-    // revisar esta media i vore si se pot 
+    
+    @include mq($bp-large) {
+        //min width 1440
+        padding: 8rem;
+        background-color: red;
+    }
+
+    @include mq($bp-xlarge) {
+        //min width 1920
+        padding: 8rem 10rem;
+        background-color: olivedrab;
+    }
 }
 

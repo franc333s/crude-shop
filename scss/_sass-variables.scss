@@ -4,6 +4,7 @@ $color-white: #FFFFFF;
 $color-beige: #E5E1DB;
 $color-yellow: #EFFF3D;
 $color-green: #00FF40;
+$color-brown: #81796E;
 $color-black: #0F0F0F;
 
 //Color implementation
@@ -16,9 +17,14 @@ $color-bg-black: $color-black;
 //Units
 $unit-base: 0.4rem;
 
+//Unit implementation in text
+$font-size-small: calc($unit-base * 4);
+
 //Viewports
 $vw-100: 100vw;
 $vh-100: 100vh;
+$vw-50: 50vw;
+$vh-50: 50vh;
 
 
 //Units implementation in margins and paddings
@@ -37,8 +43,8 @@ $vh-100: 100vh;
 
 
 // Fronts
-$font-primary: 'Epilogue';
-$font-secondary: 'JetBrains Mono';
+$font-primary: 'Epilogue', sans-serif;
+$font-secondary: 'JetBrains Mono', monospace;
 
 
 
