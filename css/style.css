@@ -30,7 +30,7 @@ section {
   background-color: pink;
   padding: 8rem 2rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 48rem) {
   .main--padding {
     padding: 8rem 4rem;
   }
@@ -86,6 +86,8 @@ a:visited {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: fixed;
+  width: 100%;
   margin: 0;
   background-color: #E5E1DB;
   border-bottom: 2px #0F0F0F solid;
@@ -102,12 +104,50 @@ a:visited {
   padding: 1.2rem 2rem;
 }
 .topbar--mobile__menu {
-  background-color: red;
+  font-size: 1.6rem;
+  border: none;
+  padding: 0;
+}
+.topbar--mobile__logo {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 .topbar--mobile__cart {
   background-color: yellow;
 }
-@media all and (min-width: 900px) {
+.topbar--mobile__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #00FF40;
+  opacity: 0.95;
+  color: #0F0F0F;
+  list-style: none;
+  text-align: center;
+  padding: 2.8rem 0;
+  margin-left: -2rem;
+  position: absolute;
+  top: 0;
+  left: 2rem;
+  width: 100%;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.topbar--mobile__nav__item {
+  padding: 3.2rem 0;
+  font-size: 4rem;
+  font-weight: 300;
+}
+.topbar--mobile__nav__item:hover {
+  font-style: italic;
+  font-weight: 700;
+}
+@media all and (min-width: 48rem) {
   .topbar--mobile {
     display: none;
   }
@@ -134,22 +174,26 @@ a:visited {
 .topbar--desktop__nav__item {
   padding: 0 2.4rem;
 }
-@media all and (min-width: 1440px) {
+@media all and (min-width: 90rem) {
   .topbar--desktop {
     padding: 1.6rem 8rem;
     background-color: red;
   }
 }
-@media all and (min-width: 1920px) {
+@media all and (min-width: 120rem) {
   .topbar--desktop {
     padding: 1.6rem 10rem;
     background-color: blue;
   }
 }
-@media all and (max-width: 899px) {
+@media all and (max-width: 767px) {
   .topbar--desktop {
     display: none;
   }
+}
+
+.jsHide {
+  left: -100%;
 }
 
 .hero__bg-img {
@@ -169,7 +213,7 @@ a:visited {
   -o-object-fit: cover;
      object-fit: cover;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 48rem) {
   .img--full-width {
     height: 75vh;
   }
@@ -204,7 +248,7 @@ h2,
   font-size: 3.6rem;
   padding-bottom: 1.6rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 48rem) {
   h2,
 .h2 {
     font-size: 2.8rem;
@@ -354,11 +398,14 @@ button,
   color: #E5E1DB;
 }
 
+.btn--link:hover {
+  font-style: italic;
+}
 .btn--link:visited {
   color: currentColor;
 }
 
-@media all and (min-width: 768px) {
+@media all and (min-width: 48rem) {
   .btn-half-screen {
     width: 40vw;
   }
@@ -376,7 +423,7 @@ button,
 .products__item ~ .products__item {
   margin-top: 8rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 48rem) {
   .products__item ~ .products__item {
     margin-top: 0;
   }
@@ -388,13 +435,13 @@ button,
   width: 100%;
   margin-bottom: 2rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 48rem) {
   .products__item__img {
     height: 68rem;
   }
 }
 
-@media all and (min-width: 768px) {
+@media all and (min-width: 48rem) {
   .products {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -464,7 +511,7 @@ button,
   font-size: 2rem;
   text-transform: uppercase;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 48rem) {
   .footer__logo {
     max-width: 6rem;
     max-height: 4rem;
@@ -485,7 +532,7 @@ button,
   gap: 1.6rem;
   padding: 8rem 2rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 48rem) {
   .footer__element {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -526,7 +573,7 @@ button,
   gap: 1.6rem;
   padding: 8rem 2rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 48rem) {
   .footer__element--variation {
     padding: 4rem;
   }
@@ -542,7 +589,7 @@ button,
   }
 }
 
-@media all and (min-width: 768px) {
+@media all and (min-width: 48rem) {
   .footer__input-button {
     display: inline-block;
   }
@@ -597,7 +644,7 @@ button,
   font-family: "JetBrains Mono", monospace;
   font-size: 1.6rem;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 48rem) {
   [placeholder=EMAIL] {
     width: 45%;
     margin-right: 4rem;

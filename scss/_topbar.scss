@@ -1,97 +1,142 @@
 // Mediaqueries
-$bp-small: 390px;
-$bp-medium: 900px;
-$bp-large: 1440px;
-$bp-xlarge: 1920px;
+$bp-small: 24rem; // 384px 
+$bp-medium: 48rem; // 768px
+$bp-large: 90rem; // 1440px
+$bp-xlarge: 120rem; // 1920px
+
 
 @mixin mq($bp: $bp-medium, $bp-width: min-width) {
-    @media all and ($bp-width: $bp) {
-        @content;
-    }
+  @media all and ($bp-width: $bp) {
+    @content;
+  }
 }
-
 
 // REVISAR COMO QUITAR EL NEGRO DE LOS LINKS
 a {
-    text-decoration: none;
-    color: $color-black;
+  text-decoration: none;
+  color: $color-black;
 }
 
 a:visited {
-    color: $color-black;
+  color: $color-black;
 }
 
-
 .topbar {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
 
-    margin: 0;
-    background-color: $color-bg-beige;
-    border-bottom: 2px $color-black solid;
+  margin: 0;
+  background-color: $color-bg-beige;
+  border-bottom: 2px $color-black solid;
 
-    list-style: none;
-    text-transform: uppercase;
-    border-bottom: 2px $color-black solid;
+  list-style: none;
+  text-transform: uppercase;
+  border-bottom: 2px $color-black solid;
 
-    font-size: 1.6rem;
-
+  font-size: 1.6rem;
 }
 
 .topbar--mobile {
-    justify-content: space-between;
-    padding: 1.2rem 2rem;
+  justify-content: space-between;
+  padding: 1.2rem 2rem;
+
+  &__menu {
+    font-size: 1.6rem;
+    border: none;
+    padding: 0;
+  }
+
+  &__logo {
+    flex-grow: 1;
+  }
+
+  &__cart {
+    background-color: yellow;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-bg-green;
+    opacity: 0.95;
+    color: $color-black;
+    
+
+    list-style: none;
+    text-align: center;
+    padding: 2.8rem 0;
+    margin-left: -2rem;
+
+    position: absolute;
+    top: 0;
+    left: 2rem;
+    // porque necesito poner 20 px y no 0. porque no vale con 0????
+    width: 100%;
+
+    transition: all .5s ease;
 
 
-    &__menu {
-        background-color: red;
+
+    &__item {
+      padding: 3.2rem 0;
+      font-size: 4rem;
+      font-weight: 300;
+
+      &:hover {
+        font-style: italic;
+        font-weight: 700;
+      }
     }
 
-    &__cart {
-        background-color: yellow;
-    }
+    
+  }
 
-    @include mq($bp-medium) {
-        //min width 900
-        display: none;
-    }
+  @include mq($bp-medium) {
+    //min width 768
+    display: none;
+  }
 }
 
 .topbar--desktop {
+  justify-content: space-between;
+  padding: 1.6rem 4rem;
+
+  &__nav {
+    background-color: orange;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
     justify-content: space-between;
-    padding: 1.6rem 4rem;
 
-    &__nav {
-        background-color: orange;
-        display: flex;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        justify-content: space-between;
-
-        &__item {
-            padding: 0 2.4rem;
-        }
-
+    &__item {
+      padding: 0 2.4rem;
     }
+  }
 
-    @include mq($bp-large) {
-        //min width 1440
-        padding: 1.6rem 8rem;
-        background-color: red;
-    }
+  @include mq($bp-large) {
+    //min width 1440
+    padding: 1.6rem 8rem;
+    background-color: red;
+  }
 
-    @include mq($bp-xlarge) {
-        //min width 1920
-        padding: 1.6rem 10rem;
-        background-color: blue;
-    }
+  @include mq($bp-xlarge) {
+    //min width 1920
+    padding: 1.6rem 10rem;
+    background-color: blue;
+  }
 
-    @include mq(899px, max-width) {
-        //max width 899
-        display: none;
-    }
+  @include mq(767px, max-width) {
+    //max width 767
+    display: none;
+  }
 }
 
+// Clases para js del menú desplegable
 
-
+.jsHide {
+  // display: none;
+  left: -100%;
+}
