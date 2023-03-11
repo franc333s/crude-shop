@@ -1,4 +1,18 @@
-//Font colors
+// Mediaqueries
+$bp-small: 24rem; // 384px 
+$bp-medium: 48rem; // 768px
+$bp-large: 90rem; // 1440px
+$bp-xlarge: 120rem; // 1920px
+
+
+@mixin mq($bp: $bp-medium, $bp-width: min-width) {
+  @media all and ($bp-width: $bp) {
+    @content;
+  }
+}
+
+
+//sFont colors
 
 .color--beige {
     color: $color-beige;
@@ -32,6 +46,11 @@
 
 
 
-.fondo-verde {
-    background-color: $color-bg-green;
+.text-half-screen {
+    @include mq($bp-large) {
+        //min width 1440px
+        width: 50vw;
+
+    }
+
 }

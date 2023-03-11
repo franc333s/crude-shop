@@ -14,7 +14,6 @@
     rel="stylesheet">
 </head>
 
-<body>
 
 
   <!-- Navigation -->
@@ -90,13 +89,23 @@
   </header>
 
 
-  <main class="padding-behind-topbar">
-    <div class="fondo-verde">
-      <h1 class="">Contáctanos</h1>
-      <p>Para cualquier consulta que nos quieras hacer sobre pedidos realizados, cualquier duda que tengas o simplemente
+<body class="padding-top--topbar-fix">
+
+  <main class="">
+
+    <div class="main--padding">
+      <h1 class="h1">Contáctanos</h1>
+      <p class="main--p text-half-screen">Para cualquier consulta que nos quieras hacer sobre pedidos realizados, cualquier duda que tengas o simplemente
         decirnos hola ¡escríbenos!</p>
-      <form class="" action="">
-        <input type="text">
+      <form class="contact-form" action="">
+        
+        <div class="contact-form__name-email">
+            <input type="text" placeholder="NAME" name="" id="">
+            <input type="email" placeholder="EMAIL" name="" id="">
+          </div>
+            <input type="text" placeholder="¿QUÉ NOS CUENTAS?" name="" id="">
+            <button type="submit" class="btn btn--color-black">Enviar</button>
+
       </form>
     </div>
 
@@ -145,10 +154,10 @@
       <p>Newsletter</p>
       <small class="text-transform--initial">Suscríbete y mantente al día de todas nuestras ofertas, descuentos y
         novedades.</small>
-      <div class="footer__input-button">
-        <input type="email" placeholder="EMAIL" name="" id="">
-        <button type="submit" class="btn btn--color-beige btn-half-screen">Enviar</button>
-      </div>
+        <form class="footer__input-button footer__newsletter" action="">
+          <input type="email" placeholder="EMAIL" name="" id="">
+          <button type="submit" class="btn btn--color-beige btn-half-screen">Enviar</button>
+        </form>
     </div>
 
     <div class="footer__element">

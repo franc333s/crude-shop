@@ -23,10 +23,12 @@ button,
     font-family: $font-secondary;
 
 
+
 }
 
 .btn--color-black {
     border: solid 0.2rem $color-black;
+
 
     &:visited {
         color: currentColor;

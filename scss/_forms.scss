@@ -13,7 +13,7 @@ $bp-xlarge: 120rem; // 1920px
 
 // Newsletter suscription
 
-[placeholder="EMAIL"] {
+.footer__newsletter [type="email"] {
     color: $color-beige;
 	background: none;
     border: 2px solid $color-beige;
@@ -55,4 +55,67 @@ $bp-xlarge: 120rem; // 1920px
         margin-right: 4rem;
 
     }
+}
+
+
+// Contant form
+
+.contact-form [type="email"],
+.contact-form [type="text"] {
+    color: $color-black;
+	background: none;
+    border: 2px solid $color-black;
+	border-top: none;
+    border-left: none;
+    border-right: none;
+	// -webkit-appearance: none;
+	// -moz-appearance: none;
+	// appearance: none;
+    margin-top: 0rem;
+    margin-bottom: 2.8rem;
+    padding: 1.4rem 0;
+    width: 100%;
+
+    &:focus {
+        background-color: transparent;
+        color: $color-black;
+        font-family: $font-secondary;
+        font-size: $font-size-small;
+        outline: none;
+    }
+
+    &::placeholder {
+        color: $color-black;
+        font-family: $font-secondary;
+        font-size: $font-size-small;
+    }
+    &:-ms-input-placeholder {
+        color: $color-black;
+        font-family: $font-secondary;
+        font-size: $font-size-small;
+    }
+
+    @include mq($bp-large) {
+        //min width 1440px
+        padding-top: 4rem;
+
+    }
+}
+
+.contact-form [placeholder="¿QUÉ NOS CUENTAS?"] {
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+
+.contact-form__name-email {
+
+    @include mq($bp-medium) {
+        //min width 768px
+        display: flex;
+        gap: 4rem;
+       
+
+
+    }
+    
 }
