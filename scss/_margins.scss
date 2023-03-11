@@ -59,3 +59,13 @@ section {
     }
 }
 
+
+.padding-behind-topbar {
+    margin-top: 19.9rem 0;
+
+    @include mq($bp-medium) {
+        //min width 768
+        margin-top: 5.7rem;
+    }
+
+}

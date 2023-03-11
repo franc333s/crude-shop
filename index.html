@@ -13,10 +13,16 @@
     href="https://fonts.googleapis.com/css2?family=Epilogue:wght@800&family=JetBrains+Mono:wght@300;500;800&display=swap"
     rel="stylesheet">
 </head>
+
+<body>
+
+  <!-- Navigation -->
+
 <header>
+
   <ul class="topbar topbar--mobile" role="navigation">
-    <li><button onclick="toggleMenu()" class="jsBtn topbar--mobile__menu">Menú</button></li>
-      <ul role="navigation" onclick="hideMenu()" class="jsHide jsList topbar--mobile__nav">
+    <li><button class="jsBtn topbar--mobile__menu">Menú</button></li>
+      <ul role="navigation" class="jsHide jsList topbar--mobile__nav">
         <li class="topbar--mobile__nav__item"><a href="https://google.com" target="_blank">New in</a></li>
         <li class="topbar--mobile__nav__item"><a href="">Catálogo</a></li>
         <li class="topbar--mobile__nav__item"><a href="">Nosotrxs</a></li>
@@ -37,11 +43,12 @@
     </li>
     <li><a href="topbar__cart">Carrito</a></li>
   </ul>
+
 </header>
 
-<body>
+
   <main class="">
-    <section class="hero__bg-img content-centered">
+    <section class="hero__bg-img content-centered padding-behind-topbar">
       <p class="hero__title">Crude</p>
       <h1 class="hero__subtitle">Bisutería unisex</h1>
       <p class="hero__title">Jewelry for you all</p>
@@ -146,6 +153,9 @@
     </section>
   </main>
 
+
+  <!--   Footer   -->
+
   <footer class="footer">
     <div class="footer__element boder-bottom--solid">
       <a href="" class="btn--link">
@@ -175,7 +185,7 @@
       <a href="" class="btn--link">
         <p class="color--beige">Faq</p>
       </a>
-      <a href="" class="btn--link">
+      <a href="contact.html" class="btn--link">
         <p class="color--beige">Contáctanos</p>
       </a>
     </div>
@@ -199,6 +209,9 @@
       <p class="font-size-small">&#x24B8; Crude 2023</p>
 
     </div>
+
+    <!-- Javascript -->
+
     <script type="module" src="js/main.js"></script>
 
   </footer>
