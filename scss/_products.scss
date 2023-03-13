@@ -1,0 +1,88 @@
+// Mediaqueries
+$bp-small: 24rem; // 384px
+$bp-medium: 48rem; // 768px
+$bp-large: 90rem; // 1440px
+$bp-xlarge: 120rem; // 1920px
+
+@mixin mq($bp: $bp-medium, $bp-width: min-width) {
+  @media all and ($bp-width: $bp) {
+    @content;
+  }
+}
+
+
+.catalogue {
+  display: grid;
+  grid-template-columns: 100%;
+
+  @include mq($bp-medium) {
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2.4rem;
+  row-gap: 6rem;
+  
+}
+  
+  @include mq($bp-large) {
+    grid-template-columns: repeat(3, 1fr);
+    
+  }
+}
+
+.catalogue--frontpage {
+  display: grid;
+  grid-template-columns: 100%;
+  
+  @include mq($bp-medium) {
+    //min width 768px
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2.4rem;
+
+  }
+
+}
+
+.catalogue__item__img {
+  object-fit: cover;
+  width: 100%;
+  margin-bottom: 2rem;
+
+  @include mq($bp-medium) {
+    height: 68rem;
+  }
+}
+
+.catalogue__name-price {
+  font-weight: 700;
+  font-size: 2rem;
+  display: flex;
+  gap: 4rem;
+  justify-content: space-between;
+}
+
+.catalogue__item ~ .catalogue__item {
+  margin-top: 6rem;
+
+  @include mq($bp-medium) {
+    margin-top: 0;
+  }
+}
+
+
+
+// Item discount
+
+.catalogue__item {
+  position: relative;
+}
+
+
+.catalogue__item__marker {
+  font-family: $font-primary;
+  font-size: 2rem;
+  text-transform: uppercase;
+  background-color: $color-bg-green;
+  position: absolute;
+  padding: 1.2rem 1.6rem 0.8rem;
+  right: 2rem;
+  top: 2rem;
+}

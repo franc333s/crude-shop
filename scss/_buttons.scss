@@ -28,6 +28,7 @@ button,
 
 .btn--color-black {
     border: solid 0.2rem $color-black;
+    color: $color-black;
 
 
     &:visited {
@@ -75,6 +76,8 @@ button,
     }
     
 }
+
+//Styles for buttons in the Product page
 
 
 // links that look like text

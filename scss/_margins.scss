@@ -28,7 +28,7 @@ section {
     @include mq($bp-large) {
         //min width 1440
         padding: 8rem;
-        background-color: rgb(237, 177, 177);
+        background-color: rgb(234, 245, 243);
     }
 
     @include mq($bp-xlarge) {
@@ -62,7 +62,7 @@ section {
 
 
 // Padding to compensate a fixed topbar
-.padding-top--topbar-fix {
+.body--padding-top {
     padding-top: 5.9rem;
 
     @include mq($bp-medium) {
