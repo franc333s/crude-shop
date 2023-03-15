@@ -1,112 +1,131 @@
 // Mediaqueries
-$bp-small: 24rem; // 384px 
+$bp-small: 24rem; // 384px
 $bp-medium: 48rem; // 768px
 $bp-large: 90rem; // 1440px
 $bp-xlarge: 120rem; // 1920px
 
 @mixin mq($bp: $bp-medium, $bp-width: min-width) {
-    @media all and ($bp-width: $bp) {
-        @content;
-    }
+  @media all and ($bp-width: $bp) {
+    @content;
+  }
 }
 
-
 // General styles applied to all buttons
-button, 
+button,
 .btn {
-    text-transform: uppercase;
-    font-size: 2rem;
-    padding: 1.2rem 10rem;
-    transition: 0.3s ease-in-out;
+  text-transform: uppercase;
+  font-size: 2rem;
+  padding: 1.2rem 8rem;
+  border: none;
 
-    background-color: transparent;
-    font-family: $font-secondary;
+  background-color: transparent;
+  font-family: $font-secondary;
 
-
-
+  transition: 0.3s ease-in-out;
 }
 
 .btn--color-black {
+  border: solid 0.2rem $color-black;
+  color: $color-black;
+
+  &:visited {
+    color: currentColor;
+  }
+
+  &:hover {
+    background-color: $color-bg-black;
+    color: $color-beige;
+  }
+
+
+  &--small {
     border: solid 0.2rem $color-black;
     color: $color-black;
-
-
-    &:visited {
-        color: currentColor;
-    }
+    padding: 1.2rem 4rem;
 
     &:hover {
-        background-color: $color-bg-black;
-        color: $color-beige;
+      background-color: $color-bg-black;
+      color: $color-beige;
     }
+
+    &--selected {
+      border: none;
+      background-color: $color-bg-black;
+      color: $color-beige;
+      //revisar si aixo es aixinaaaaaa
+    }
+  
+  }
 }
 
 .btn--color-beige {
-    font-family: $font-secondary;
-    color: $color-beige;
-    border: solid 0.2rem $color-beige;
-    background-color: transparent;
+  font-family: $font-secondary;
+  color: $color-beige;
+  border: solid 0.2rem $color-beige;
+  background-color: transparent;
 
-    &:visited {
-        color: currentColor;
-    }
+  &:visited {
+    color: currentColor;
+  }
 
-    &:hover {
-        background-color: $color-bg-beige;
-        color: $color-black;
-    }
-
+  &:hover {
+    background-color: $color-bg-beige;
+    color: $color-black;
+  }
 }
-
-
 
 // Styles of button Add to cart
 .btn--add-to-cart {
+  border: none;
+  background-color: $color-bg-yellow;
+
+  &:visited {
+    color: currentColor;
+  }
+
+  &:hover {
     border: none;
-    background-color: $color-bg-yellow;
-
-    &:visited {
-        color: currentColor;
-    }
-
-    &:hover {
-        border: none;
-        background-color: $color-bg-black;
-        color: $color-beige;
-    }
-    
+    background-color: $color-bg-black;
+    color: $color-beige;
+  }
 }
 
 //Styles for buttons in the Product page
 
-
 // links that look like text
 .btn--link {
+  &:hover {
+    font-style: italic;
+  }
 
-    &:hover {
-        font-style: italic;
-    }
-
-    &:visited {
-        color: currentColor;
-    }
+  &:visited {
+    color: currentColor;
+  }
 }
 
 .btn-half-screen {
-    @include mq($bp-medium) {
-        //min width 768px
-        width: 40vw;
-
-    }
-
+  @include mq($bp-medium) {
+    //min width 768px
+    width: 40vw;
+  }
 }
 
 [disabled] {
-    color: $color-brown;
-    border: $color-brown 2px solid;
+  color: $color-brown;
+  border: $color-brown 2px solid;
 
-    &:hover {
-        background-color: transparent;
-        color: $color-brown;
-    }
+  &:hover {
+    background-color: transparent;
+    color: $color-brown;
+  }
+}
+
+
+.link--centered {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  
 }

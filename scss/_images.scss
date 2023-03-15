@@ -19,13 +19,23 @@ $bp-xlarge: 120rem; // 1920px
     background-repeat: no-repeat; 
     background-size: cover;
     margin-top: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
+
+
 
 .img--full-width {
     background-color: $color-white;
     width: $vw-100;
     height: 70vh;
-    object-fit: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
     //qué pasa con el margen inferior de la imagen?????
 
     @include mq($bp-medium) {
@@ -33,10 +43,4 @@ $bp-xlarge: 120rem; // 1920px
     }
 }
 
-.content-centered {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
-}

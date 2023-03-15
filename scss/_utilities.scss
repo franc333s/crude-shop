@@ -31,7 +31,7 @@ $bp-xlarge: 120rem; // 1920px
     text-transform: initial;
 }
 
-.font-size-small {
+.font-size--small {
     font-size: $font-size-small;
 }
 
@@ -54,3 +54,23 @@ $bp-xlarge: 120rem; // 1920px
     }
 
 }
+
+
+// Css for carousel in home and product page
+
+.jsCarouselNewsletter {
+    overflow: hidden;
+    background-color: #00ff40;
+    display: flex;
+    margin-top: 6rem;
+  
+  }
+  
+  .jsCarouselNewsletter p {
+    font-size: 1.6rem;
+    white-space: nowrap;
+    text-transform: uppercase;
+    margin: 1.2rem 0;
+  
+  }
+  

@@ -41,6 +41,23 @@ $bp-xlarge: 120rem; // 1920px
 
 }
 
+
+// NOU
+.catalogue--related-products {
+  display: none;
+
+  @include mq($bp-medium) {
+    //min width 768px
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2.4rem;
+
+  }
+}
+
+
+// FINAL NOU
+
 .catalogue__item__img {
   object-fit: cover;
   width: 100%;
@@ -85,4 +102,115 @@ $bp-xlarge: 120rem; // 1920px
   padding: 1.2rem 1.6rem 0.8rem;
   right: 2rem;
   top: 2rem;
+}
+
+// Product detail content
+
+.product-detail {
+  display: grid;
+  grid-template-columns: 1fr;
+  //column-gap: 2rem;
+  padding: 2rem 2rem 4rem;
+
+  @include mq($bp-medium) {
+    padding: 4rem 4rem 0;
+    grid-template-columns: 5fr 3fr;
+    column-gap: 2.8rem;
+  }
+
+  @include mq($bp-large) {
+    padding: 8rem 8rem 0;
+    grid-template-columns: 5fr 3fr;
+    column-gap: 3.6rem;
+  }
+
+  @include mq($bp-xlarge) {
+    padding: 8rem 10rem 0;
+    grid-template-columns: 5fr 3fr;
+    column-gap: 4.8rem;
+  }
+
+  
+
+
+  &__img-slider {
+
+    @include mq($bp-medium) {
+      display: none;
+
+      }
+  }
+
+
+  &__imgs {
+
+    display: none;
+
+    @include mq($bp-medium) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    overflow: hidden;
+    }
+  }
+
+  &--remove-padding-top {
+    // Removeing padding on top of second grid in product page
+    padding-top: 0;
+  }
+
+}
+
+
+.product-detail__imgs__item {
+  background-color: $color-white;
+  height: 70vh;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 2rem;
+
+  @include mq($bp-medium) {
+      //max-width: 200px;
+  }
+  
+}
+
+
+
+
+
+
+
+// Specs in accordion
+.specs-accordion {
+  border: none;
+  border-bottom: 2px solid $color-black;
+  border-radius: 0;
+  color: $color-black;
+  font-size: 2rem;
+  
+  padding: 0 0 0.4rem;
+  width: 100%;
+  text-align: left;
+
+}
+
+.specs-accordion ~ .specs-accordion {
+  padding-top: 2rem;
+}
+
+.specs-accordion:hover {
+  cursor: pointer;
+}
+
+.active-accordion {
+  border-bottom: none;
+}
+
+.specs-info {
+  border-bottom: 2px solid $color-black;
+  font-size: 1.6rem;
+  padding: 1.6rem 0 2rem;
+  display: none;
+overflow: hidden;
 }
