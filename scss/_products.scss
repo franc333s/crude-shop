@@ -142,9 +142,8 @@ $bp-xlarge: 120rem; // 1920px
 
     @include mq($bp-medium) {
       display: none;
-
       }
-  }
+    }
 
   &__imgs {
 
@@ -155,6 +154,18 @@ $bp-xlarge: 120rem; // 1920px
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     overflow: hidden;
+    }
+
+    &__item {
+      background-color: $color-white;
+      height: 70vh;
+      width: 100%;
+      object-fit: cover;
+      margin-bottom: 2rem;
+    
+      @include mq($bp-medium) {
+          //max-width: 200px;
+      } 
     }
   }
 
@@ -171,61 +182,58 @@ $bp-xlarge: 120rem; // 1920px
 }
 
 
-.product-detail__imgs__item {
-  background-color: $color-white;
-  height: 70vh;
-  width: 100%;
-  object-fit: cover;
-  margin-bottom: 2rem;
-
-  @include mq($bp-medium) {
-      //max-width: 200px;
-  }
-  
-}
-
-
 
 
 
 
 
 // Specs in accordion
-.specs__accordion {
-  border: none;
-  border-bottom: 2px solid $color-black;
-  border-radius: 0;
-  color: $color-black;
-  font-size: 2rem;
+
+.specs {
+  padding-top: 8rem;
+
+  @include mq($bp-medium) {
+    padding-top: 0;
+}
+
+  &__accordion {
+    border: none;
+    border-bottom: 2px solid $color-black;
+    border-radius: 0;
+    color: $color-black;
+    font-size: 2rem;
+    
+    padding: 0 0 0.4rem;
+    width: 100%;
+    text-align: left;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__info {
+    border-bottom: 2px solid $color-black;
+    font-size: 1.6rem;
+    padding: 1.6rem 0 2rem;
+    display: none;
+    overflow: hidden;
+  }
+
+  &__cta {
+    padding-top: 16rem;
+    padding-bottom: 4rem;
   
-  padding: 0 0 0.4rem;
-  width: 100%;
-  text-align: left;
+  }
 
+  &__accordion ~ &__accordion {
+    padding-top: 2rem;
+  }
 }
 
-.specs__accordion ~ .specs__accordion {
-  padding-top: 2rem;
-}
-
-.specs__accordion:hover {
-  cursor: pointer;
-}
 
 .active-accordion {
   border-bottom: none;
 }
 
-.specs__info {
-  border-bottom: 2px solid $color-black;
-  font-size: 1.6rem;
-  padding: 1.6rem 0 2rem;
-  display: none;
-overflow: hidden;
-}
 
-.specs__cta {
-  padding-top: 16rem;
-  padding-bottom: 4rem;
-
-}

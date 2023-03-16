@@ -481,13 +481,21 @@ button,
 .btn {
   text-transform: uppercase;
   font-size: 2rem;
-  padding: 1.2rem 8rem;
+  padding: 1.2rem 0rem;
+  width: 100%;
   border: none;
   color: currentColor;
   background-color: transparent;
   font-family: "JetBrains Mono", monospace;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
+}
+@media all and (min-width: 48rem) {
+  button,
+.btn {
+    width: auto;
+    padding: 1.2rem 4rem;
+  }
 }
 
 .btn--color-black {
@@ -505,6 +513,7 @@ button,
   border: solid 0.2rem #0F0F0F;
   color: #0F0F0F;
   padding: 1.2rem 4rem;
+  width: auto;
 }
 .btn--color-black--small:hover {
   background-color: #0F0F0F;
@@ -745,6 +754,14 @@ button,
     overflow: hidden;
   }
 }
+.product-detail__imgs__item {
+  background-color: #FFFFFF;
+  height: 70vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 2rem;
+}
 .product-detail--modify-paddings {
   padding-top: 0;
   padding-bottom: 6rem;
@@ -755,13 +772,13 @@ button,
   }
 }
 
-.product-detail__imgs__item {
-  background-color: #FFFFFF;
-  height: 70vh;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  margin-bottom: 2rem;
+.specs {
+  padding-top: 8rem;
+}
+@media all and (min-width: 48rem) {
+  .specs {
+    padding-top: 0;
+  }
 }
 .specs__accordion {
   border: none;
@@ -773,19 +790,9 @@ button,
   width: 100%;
   text-align: left;
 }
-
-.specs__accordion ~ .specs__accordion {
-  padding-top: 2rem;
-}
-
 .specs__accordion:hover {
   cursor: pointer;
 }
-
-.active-accordion {
-  border-bottom: none;
-}
-
 .specs__info {
   border-bottom: 2px solid #0F0F0F;
   font-size: 1.6rem;
@@ -793,10 +800,16 @@ button,
   display: none;
   overflow: hidden;
 }
-
 .specs__cta {
   padding-top: 16rem;
   padding-bottom: 4rem;
+}
+.specs__accordion ~ .specs__accordion {
+  padding-top: 2rem;
+}
+
+.active-accordion {
+  border-bottom: none;
 }
 
 .section__reviews {

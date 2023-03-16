@@ -20,7 +20,8 @@ button,
 .btn {
   text-transform: uppercase;
   font-size: 2rem;
-  padding: 1.2rem 8rem;
+  padding: 1.2rem 0rem;
+  width: 100%;
   border: none;
   color: currentColor;
 
@@ -28,6 +29,11 @@ button,
   font-family: $font-secondary;
 
   transition: 0.3s ease-in-out;
+
+  @include mq($bp-medium) {
+    width: auto;
+    padding: 1.2rem 4rem;
+  }
 }
 
 .btn--color-black {
@@ -48,6 +54,7 @@ button,
     border: solid 0.2rem $color-black;
     color: $color-black;
     padding: 1.2rem 4rem;
+    width: auto;
 
     &:hover {
       background-color: $color-bg-black;
@@ -130,7 +137,6 @@ button,
 
 
 .link--centered {
-  
   display: flex;
   flex-direction: column;
   align-items: center;
