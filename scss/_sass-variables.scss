@@ -14,6 +14,15 @@ $color-bg-yellow: $color-yellow;
 $color-bg-green: $color-green;
 $color-bg-black: $color-black;
 
+// Mediaqueries
+$bp-small: 24rem; // 384px 
+$bp-lowermedium: 37rem; // 592px
+$bp-medium: 48rem; // 768px
+$bp-uppermedium: 60rem; // 960px
+$bp-large: 90rem; // 1440px
+$bp-xlarge: 120rem; // 1920px
+
+
 //Units
 $unit-base: 0.4rem;
 

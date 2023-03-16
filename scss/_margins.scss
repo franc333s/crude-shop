@@ -1,9 +1,3 @@
-// Mediaqueries
-$bp-small: 24rem; // 384px 
-$bp-medium: 48rem; // 768px
-$bp-large: 90rem; // 1440px
-$bp-xlarge: 120rem; // 1920px
-
 @mixin mq($bp: $bp-medium, $bp-width: min-width) {
     @media all and ($bp-width: $bp) {
         @content;
@@ -17,7 +11,6 @@ section {
 }
 
 .main--padding {
-    background-color: pink;
     padding: 4rem 2rem 8rem;
 
     @include mq($bp-medium) {
@@ -28,35 +21,29 @@ section {
     @include mq($bp-large) {
         //min width 1440
         padding: 8rem;
-        background-color: rgb(234, 245, 243);
     }
 
     @include mq($bp-xlarge) {
         //min width 1920
         padding: 8rem 10rem;
-        background-color: olivedrab;
     }
 }
 
 .hero--padding {
     padding: 4rem 2rem 8rem;
-    background-color: lightcoral;
 
     @media all and (max-width: 1440px) and (min-width: 768px) {
         padding: 4rem 4rem;
-        background-color: aqua;
     }
     
     @include mq($bp-large) {
         //min width 1440
         padding: 8rem 8rem;
-        background-color: red;
     }
 
     @include mq($bp-xlarge) {
         //min width 1920
         padding: 8rem 10rem;
-        background-color: olivedrab;
     }
 }
 
@@ -70,6 +57,5 @@ section {
         //min width 768
         padding-top: 7.5rem;
     }
-
 }
 

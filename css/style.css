@@ -17,7 +17,6 @@ body {
   background-color: #FFFFFF;
   color: #0F0F0F;
   margin: 0;
-  cursor: crosshair;
   overflow-x: hidden;
 }
 
@@ -28,7 +27,6 @@ section {
 }
 
 .main--padding {
-  background-color: pink;
   padding: 4rem 2rem 8rem;
 }
 @media all and (min-width: 48rem) {
@@ -39,36 +37,30 @@ section {
 @media all and (min-width: 90rem) {
   .main--padding {
     padding: 8rem;
-    background-color: rgb(234, 245, 243);
   }
 }
 @media all and (min-width: 120rem) {
   .main--padding {
     padding: 8rem 10rem;
-    background-color: olivedrab;
   }
 }
 
 .hero--padding {
   padding: 4rem 2rem 8rem;
-  background-color: lightcoral;
 }
 @media all and (max-width: 1440px) and (min-width: 768px) {
   .hero--padding {
     padding: 4rem 4rem;
-    background-color: aqua;
   }
 }
 @media all and (min-width: 90rem) {
   .hero--padding {
     padding: 8rem 8rem;
-    background-color: red;
   }
 }
 @media all and (min-width: 120rem) {
   .hero--padding {
     padding: 8rem 10rem;
-    background-color: olivedrab;
   }
 }
 
@@ -127,9 +119,6 @@ a:visited {
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
-.topbar--mobile__cart {
-  background-color: yellow;
-}
 .topbar--mobile__nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -179,7 +168,6 @@ a:visited {
   padding: 1.6rem 4rem;
 }
 .topbar--desktop__nav {
-  background-color: orange;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -312,6 +300,11 @@ h2,
 .h2 {
     font-size: 4.4rem;
   }
+}
+
+h3,
+.h3 {
+  font-size: 2rem;
 }
 
 p {
@@ -447,14 +440,24 @@ p {
 }
 
 @media all and (min-width: 90rem) {
-  .text-half-screen {
-    width: 50vw;
+  .section__two-columns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media all and (min-width: 90rem) {
+  .section__two-columns__half-screen {
+    width: 50%;
   }
 }
 
 .jsCarouselNewsletter {
   overflow: hidden;
-  background-color: #00ff40;
+  background-color: #00FF40;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -490,7 +493,7 @@ button,
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
-@media all and (min-width: 48rem) {
+@media all and (min-width: 37rem) {
   button,
 .btn {
     width: auto;
@@ -833,17 +836,6 @@ button,
 @media all and (min-width: 48rem) {
   .reviews--slider {
     display: none;
-  }
-}
-
-@media all and (min-width: 90rem) {
-  .display--flex {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 

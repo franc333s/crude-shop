@@ -1,17 +1,10 @@
-// Mediaqueries
-$bp-small: 24rem; // 384px 
-$bp-medium: 48rem; // 768px
-$bp-large: 90rem; // 1440px
-$bp-xlarge: 120rem; // 1920px
-
-
 @mixin mq($bp: $bp-medium, $bp-width: min-width) {
   @media all and ($bp-width: $bp) {
     @content;
   }
 }
 
-// REVISAR COMO QUITAR EL NEGRO DE LOS LINKS
+// revisar estos colores de abajo
 a {
   text-decoration: none;
   color: $color-black;
@@ -56,7 +49,7 @@ a:visited {
   }
 
   &__cart {
-    background-color: yellow;
+    
   }
 
   &__nav {
@@ -107,7 +100,6 @@ a:visited {
   padding: 1.6rem 4rem;
 
   &__nav {
-    background-color: orange;
     display: flex;
     list-style: none;
     padding: 0;
