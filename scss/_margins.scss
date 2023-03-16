@@ -18,7 +18,7 @@ section {
 
 .main--padding {
     background-color: pink;
-    padding: 8rem 2rem;
+    padding: 4rem 2rem 8rem;
 
     @include mq($bp-medium) {
         //min width 768px
@@ -39,16 +39,17 @@ section {
 }
 
 .hero--padding {
+    padding: 4rem 2rem 8rem;
     background-color: lightcoral;
-    padding: 4rem 2rem;
 
     @media all and (max-width: 1440px) and (min-width: 768px) {
-        padding: 4rem;
+        padding: 4rem 4rem;
+        background-color: aqua;
     }
     
     @include mq($bp-large) {
         //min width 1440
-        padding: 8rem;
+        padding: 8rem 8rem;
         background-color: red;
     }
 

@@ -29,7 +29,7 @@ section {
 
 .main--padding {
   background-color: pink;
-  padding: 8rem 2rem;
+  padding: 4rem 2rem 8rem;
 }
 @media all and (min-width: 48rem) {
   .main--padding {
@@ -50,17 +50,18 @@ section {
 }
 
 .hero--padding {
+  padding: 4rem 2rem 8rem;
   background-color: lightcoral;
-  padding: 4rem 2rem;
 }
 @media all and (max-width: 1440px) and (min-width: 768px) {
   .hero--padding {
-    padding: 4rem;
+    padding: 4rem 4rem;
+    background-color: aqua;
   }
 }
 @media all and (min-width: 90rem) {
   .hero--padding {
-    padding: 8rem;
+    padding: 8rem 8rem;
     background-color: red;
   }
 }
@@ -235,16 +236,29 @@ a:visited {
           align-items: center;
 }
 
-.img--full-width {
-  background-color: #FFFFFF;
-  width: 100vw;
-  height: 70vh;
+.bg-img {
+  background-color: #00FF40;
+  height: 80vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  margin-top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 @media all and (min-width: 48rem) {
-  .img--full-width {
+  .bg-img {
     height: 75vh;
   }
 }
@@ -304,12 +318,14 @@ p {
   margin: 0;
 }
 
-.main--p {
+.copy {
   font-size: 2rem;
+  font-weight: 300;
+  line-height: 150%;
   padding-bottom: 4rem;
 }
 @media all and (min-width: 90rem) {
-  .main--p {
+  .copy {
     padding-bottom: 0;
   }
 }
@@ -348,6 +364,18 @@ p {
   .product-detail__price {
     font-size: 5.2rem;
   }
+}
+
+.copy--reviews,
+.reviews__item {
+  font-size: 2rem;
+  font-weight: 300;
+  padding-bottom: 2rem;
+}
+.copy--reviews__name,
+.reviews__item__name {
+  font-weight: 700;
+  padding: 2rem 0;
 }
 
 .font-family--secondary {
@@ -430,7 +458,6 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 6rem;
 }
 
 .jsCarouselNewsletter p {
@@ -440,12 +467,23 @@ p {
   margin: 1.2rem 0;
 }
 
+@media all and (min-width: 90rem) {
+  .content--half-screen {
+    width: 50%;
+  }
+}
+
+a {
+  margin: 0;
+}
+
 button,
 .btn {
   text-transform: uppercase;
   font-size: 2rem;
   padding: 1.2rem 8rem;
   border: none;
+  color: currentColor;
   background-color: transparent;
   font-family: "JetBrains Mono", monospace;
   -webkit-transition: 0.3s ease-in-out;
@@ -495,13 +533,15 @@ button,
 .btn--add-to-cart {
   border: none;
   background-color: #EFFF3D;
+  border: solid 0.2rem #EFFF3D;
 }
 .btn--add-to-cart:visited {
-  color: currentColor;
+  color: #0F0F0F;
 }
 .btn--add-to-cart:hover {
   border: none;
   background-color: #0F0F0F;
+  border: solid 0.2rem #0F0F0F;
   color: #E5E1DB;
 }
 
@@ -538,6 +578,7 @@ button,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -571,6 +612,7 @@ button,
   display: grid;
   -ms-grid-columns: 100%;
   grid-template-columns: 100%;
+  margin-bottom: 8rem;
 }
 @media all and (min-width: 48rem) {
   .catalogue--frontpage {
@@ -579,6 +621,7 @@ button,
     -webkit-column-gap: 2.4rem;
        -moz-column-gap: 2.4rem;
             column-gap: 2.4rem;
+    margin-bottom: 6rem;
   }
 }
 
@@ -594,6 +637,7 @@ button,
     -webkit-column-gap: 2.4rem;
        -moz-column-gap: 2.4rem;
             column-gap: 2.4rem;
+    margin-bottom: 6rem;
   }
 }
 
@@ -601,11 +645,12 @@ button,
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: 1.6rem;
 }
 @media all and (min-width: 48rem) {
   .catalogue__item__img {
     height: 68rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -650,13 +695,13 @@ button,
   display: grid;
   -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
-  padding: 2rem 2rem 4rem;
+  padding: 4rem 2rem 8rem;
 }
 @media all and (min-width: 48rem) {
   .product-detail {
     padding: 4rem 4rem 0;
-    -ms-grid-columns: 5fr 2.8rem 3fr;
-    grid-template-columns: 5fr 3fr;
+    -ms-grid-columns: 1fr 2.8rem 1fr;
+    grid-template-columns: 1fr 1fr;
     -webkit-column-gap: 2.8rem;
        -moz-column-gap: 2.8rem;
             column-gap: 2.8rem;
@@ -700,8 +745,14 @@ button,
     overflow: hidden;
   }
 }
-.product-detail--remove-padding-top {
+.product-detail--modify-paddings {
   padding-top: 0;
+  padding-bottom: 6rem;
+}
+@media all and (min-width: 90rem) {
+  .product-detail--modify-paddings {
+    padding-bottom: 8rem;
+  }
 }
 
 .product-detail__imgs__item {
@@ -712,7 +763,7 @@ button,
      object-fit: cover;
   margin-bottom: 2rem;
 }
-.specs-accordion {
+.specs__accordion {
   border: none;
   border-bottom: 2px solid #0F0F0F;
   border-radius: 0;
@@ -723,11 +774,11 @@ button,
   text-align: left;
 }
 
-.specs-accordion ~ .specs-accordion {
+.specs__accordion ~ .specs__accordion {
   padding-top: 2rem;
 }
 
-.specs-accordion:hover {
+.specs__accordion:hover {
   cursor: pointer;
 }
 
@@ -735,12 +786,41 @@ button,
   border-bottom: none;
 }
 
-.specs-info {
+.specs__info {
   border-bottom: 2px solid #0F0F0F;
   font-size: 1.6rem;
   padding: 1.6rem 0 2rem;
   display: none;
   overflow: hidden;
+}
+
+.specs__cta {
+  padding-top: 16rem;
+  padding-bottom: 4rem;
+}
+
+.section__reviews {
+  background-color: #E5E1DB;
+  border-top: 2px solid #0F0F0F;
+}
+
+.reviews {
+  display: none;
+}
+@media all and (min-width: 48rem) {
+  .reviews {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 4rem 1fr 4rem 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+@media all and (min-width: 48rem) {
+  .reviews--slider {
+    display: none;
+  }
 }
 
 @media all and (min-width: 90rem) {
@@ -751,12 +831,6 @@ button,
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-}
-
-@media all and (min-width: 90rem) {
-  .content--half {
-    width: 50%;
   }
 }
 

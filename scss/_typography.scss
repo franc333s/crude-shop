@@ -14,8 +14,10 @@ p {
   margin: 0;
 }
 
-.main--p {
+.copy {
   font-size: 2rem;
+  font-weight: 300;
+  line-height: 150%;
   padding-bottom: 4rem;
 
   @include mq($bp-large) {
@@ -23,6 +25,8 @@ p {
   }
 }
 
+
+// Product sizes for font
 .product-detail__description {
   font-size: 2rem;
   padding-bottom: 4rem;
@@ -54,6 +58,24 @@ p {
   }
 }
 
+// Review sizes for fonts
+
+.copy--reviews,
+.reviews__item {
+  font-size: 2rem;
+  font-weight: 300;
+  padding-bottom: 2rem;
+
+  &__name {
+    font-weight: 700;
+    padding: 2rem 0;
+  }
+
+
+}
+
+
+
 
 .font-family--secondary {
   font-family: $font-secondary;
@@ -63,8 +85,7 @@ p {
 
 
 
-// Utilities applied to the hero's typography
-// esto iria en utilities
+// Implementation for hero's typography
 .hero__title {
   font-family: $font-primary;
   font-size: 1.6rem;

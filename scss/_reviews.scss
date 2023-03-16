@@ -1,0 +1,34 @@
+// Mediaqueries
+$bp-small: 24rem; // 384px 
+$bp-medium: 48rem; // 768px
+$bp-large: 90rem; // 1440px
+$bp-xlarge: 120rem; // 1920px
+
+@mixin mq($bp: $bp-medium, $bp-width: min-width) {
+    @media all and ($bp-width: $bp) {
+        @content;
+    }
+}
+
+
+.section__reviews {
+  background-color: $color-bg-beige;
+  border-top: 2px solid $color-black;
+}
+.reviews {
+  display: none;
+
+  @include mq($bp-medium) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  &--slider {
+
+    @include mq($bp-medium) {
+      display: none;
+    }
+  }
+}

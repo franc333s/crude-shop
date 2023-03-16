@@ -1,6 +1,7 @@
 // Mediaqueries
 $bp-small: 24rem; // 384px
 $bp-medium: 48rem; // 768px
+$bp-uppermedium: 60rem; // 960px
 $bp-large: 90rem; // 1440px
 $bp-xlarge: 120rem; // 1920px
 
@@ -28,14 +29,18 @@ $bp-xlarge: 120rem; // 1920px
   }
 }
 
+
+
 .catalogue--frontpage {
   display: grid;
   grid-template-columns: 100%;
+  margin-bottom: 8rem;
   
   @include mq($bp-medium) {
     //min width 768px
     grid-template-columns: repeat(3, 1fr);
     column-gap: 2.4rem;
+    margin-bottom: 6rem;
 
   }
 
@@ -51,6 +56,7 @@ $bp-xlarge: 120rem; // 1920px
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 2.4rem;
+    margin-bottom: 6rem;
 
   }
 }
@@ -61,10 +67,12 @@ $bp-xlarge: 120rem; // 1920px
 .catalogue__item__img {
   object-fit: cover;
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: 1.6rem;
+  
 
   @include mq($bp-medium) {
     height: 68rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -110,11 +118,11 @@ $bp-xlarge: 120rem; // 1920px
   display: grid;
   grid-template-columns: 1fr;
   //column-gap: 2rem;
-  padding: 2rem 2rem 4rem;
+  padding: 4rem 2rem 8rem;
 
   @include mq($bp-medium) {
     padding: 4rem 4rem 0;
-    grid-template-columns: 5fr 3fr;
+    grid-template-columns: 1fr 1fr;
     column-gap: 2.8rem;
   }
 
@@ -130,9 +138,6 @@ $bp-xlarge: 120rem; // 1920px
     column-gap: 4.8rem;
   }
 
-  
-
-
   &__img-slider {
 
     @include mq($bp-medium) {
@@ -140,7 +145,6 @@ $bp-xlarge: 120rem; // 1920px
 
       }
   }
-
 
   &__imgs {
 
@@ -154,9 +158,14 @@ $bp-xlarge: 120rem; // 1920px
     }
   }
 
-  &--remove-padding-top {
+  &--modify-paddings {
     // Removeing padding on top of second grid in product page
     padding-top: 0;
+    padding-bottom: 6rem;
+
+    @include mq($bp-large) {
+      padding-bottom: 8rem;
+    }
   }
 
 }
@@ -182,7 +191,7 @@ $bp-xlarge: 120rem; // 1920px
 
 
 // Specs in accordion
-.specs-accordion {
+.specs__accordion {
   border: none;
   border-bottom: 2px solid $color-black;
   border-radius: 0;
@@ -195,11 +204,11 @@ $bp-xlarge: 120rem; // 1920px
 
 }
 
-.specs-accordion ~ .specs-accordion {
+.specs__accordion ~ .specs__accordion {
   padding-top: 2rem;
 }
 
-.specs-accordion:hover {
+.specs__accordion:hover {
   cursor: pointer;
 }
 
@@ -207,10 +216,16 @@ $bp-xlarge: 120rem; // 1920px
   border-bottom: none;
 }
 
-.specs-info {
+.specs__info {
   border-bottom: 2px solid $color-black;
   font-size: 1.6rem;
   padding: 1.6rem 0 2rem;
   display: none;
 overflow: hidden;
+}
+
+.specs__cta {
+  padding-top: 16rem;
+  padding-bottom: 4rem;
+
 }

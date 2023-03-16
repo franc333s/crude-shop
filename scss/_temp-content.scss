@@ -22,11 +22,6 @@ $bp-xlarge: 120rem; // 1920px
 
 }
 
-.content--half {
 
-  @include mq($bp-large) {
-    width: 50%;
-  }
-}
 
 

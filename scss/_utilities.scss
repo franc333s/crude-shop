@@ -62,7 +62,6 @@ $bp-xlarge: 120rem; // 1920px
     overflow: hidden;
     background-color: #00ff40;
     display: flex;
-    margin-top: 6rem;
   
   }
   
@@ -74,3 +73,10 @@ $bp-xlarge: 120rem; // 1920px
   
   }
   
+
+  .content--half-screen {
+
+    @include mq($bp-large) {
+      width: 50%;
+    }
+  }

@@ -10,6 +10,11 @@ $bp-xlarge: 120rem; // 1920px
   }
 }
 
+
+a {
+  margin: 0;
+}
+
 // General styles applied to all buttons
 button,
 .btn {
@@ -17,6 +22,7 @@ button,
   font-size: 2rem;
   padding: 1.2rem 8rem;
   border: none;
+  color: currentColor;
 
   background-color: transparent;
   font-family: $font-secondary;
@@ -78,14 +84,16 @@ button,
 .btn--add-to-cart {
   border: none;
   background-color: $color-bg-yellow;
+  border: solid 0.2rem $color-yellow;
 
   &:visited {
-    color: currentColor;
+    color: $color-black;
   }
 
   &:hover {
     border: none;
     background-color: $color-bg-black;
+    border: solid 0.2rem $color-black;
     color: $color-beige;
   }
 }
@@ -126,6 +134,7 @@ button,
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   flex-grow: 1;
   
 }
