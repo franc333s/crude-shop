@@ -27,27 +27,19 @@ $bp-xlarge: 120rem; // 1920px
 $unit-base: 0.4rem;
 
 //Unit implementation in text
-$font-size-small: calc($unit-base * 4);
+$font-size-small: calc($unit-base * 4); // 16px
+$font-size-lowermedium: calc($unit-base * 5); // 20px
+$font-size-medium: calc($unit-base * 7); // 28px
+$font-size-uppermedium: calc($unit-base * 9); // 36px
+$font-size-large: calc($unit-base * 11); // 44px
+$font-size-xlarge: calc($unit-base * 13); // 52px
+
 
 //Viewports
 $vw-100: 100vw;
 $vh-100: 100vh;
 $vw-50: 50vw;
 $vh-50: 50vh;
-
-
-//Units implementation in margins and paddings
-
-
-
-    /* Units implementation */
-   // --unit-sm: calc(.5 * var(--unit-base)); // 1.5
-   // --unit-md: calc(2 * var(--unit-base)); // 6
-  //  --unit-lg: calc(3 * var(--unit-base)); // 9
-  //  --unit-xl: calc(4 * var(--unit-base)); // 12
-//--unit-xxl:calc(5 * var(--unit-base)); // 15
-  //  --unit-xxxl: calc(6 * var(--unit-base)); // 18
-
 
 
 

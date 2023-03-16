@@ -5,8 +5,7 @@
 }
 
 
-//sFont colors
-
+// Font colors
 .color--beige {
     color: $color-beige;
 
@@ -30,14 +29,11 @@
 
 
 .boder-bottom--solid {
-    border: calc($unit-base / 2) solid $color-beige;
+    border: 2px solid $color-beige;
     border-top-style: none;
     border-left-style: none;
     border-right-style: none;
 }
-
-
-
 
 .section__two-columns {
 
@@ -48,7 +44,6 @@
 
   &__half-screen {
     @include mq($bp-large) {
-      //min width 1440px
       width: 50%;
     }
   }
@@ -57,7 +52,6 @@
 
 
 // Css for green carousel
-
 .jsCarouselNewsletter {
     overflow: hidden;
     background-color: $color-bg-green;
@@ -66,7 +60,7 @@
   }
   
   .jsCarouselNewsletter p {
-    font-size: 1.6rem;
+    font-size: $font-size-small;
     white-space: nowrap;
     text-transform: uppercase;
     margin: 1.2rem 0;
