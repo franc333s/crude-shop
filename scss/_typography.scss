@@ -10,7 +10,7 @@ p {
 
 .copy {
   font-size: $font-size-lowermedium;
-  font-weight: 300;
+  font-weight: $font-weight-light;
   line-height: 150%;
   padding-bottom: 4rem;
 
@@ -20,7 +20,61 @@ p {
 }
 
 
-// Product sizes for font
+.copy--reviews,
+.reviews__item {
+  font-size: $font-size-lowermedium;
+  font-weight: $font-weight-light;
+  padding-bottom: 2rem;
+
+  &__name {
+    font-weight: $font-weight-bold;
+    padding: 2rem 0;
+  }
+}
+
+.font-family--secondary {
+  font-family: $font-secondary;
+  font-style: italic;
+  font-weight: $font-weight-bold;
+}
+
+
+
+// Implementation hero's fonts
+.hero {
+
+  &__title {
+    font-family: $font-primary;
+    font-size: $font-size-small;
+  
+  }
+
+  &__subtitle {
+    font-size: $font-size-medium;
+    font-weight: $font-weight-light;
+    padding: 1.6rem 0;
+  }
+
+  &__text {
+    font-family: $font-primary;
+    font-size: $font-size-medium;
+    line-height: 140%;
+  
+    @include mq($bp-large) {
+      font-size: $font-size-uppermedium;
+      column-count: 2;
+      column-gap: 8rem;
+      column-fill: balance;
+    }
+  
+    @include mq($bp-xlarge) {
+      font-size: $font-size-large;
+    }
+  }
+}
+
+
+// Product item font sizes
 .product-detail__description {
   font-size: $font-size-lowermedium;
   padding-bottom: 4rem;
@@ -49,64 +103,5 @@ p {
 
   @include mq($bp-xlarge) {
     font-size: $font-size-xlarge;
-  }
-}
-
-// Review sizes for fonts
-
-.copy--reviews,
-.reviews__item {
-  font-size: $font-size-lowermedium;
-  font-weight: 300;
-  padding-bottom: 2rem;
-
-  &__name {
-    font-weight: 700;
-    padding: 2rem 0;
-  }
-
-
-}
-
-
-
-
-.font-family--secondary {
-  font-family: $font-secondary;
-  font-style: italic;
-  font-weight: 800;
-}
-
-
-
-// Implementation for hero's typography
-.hero__title {
-  font-family: $font-primary;
-  font-size: $font-size-small;
-
-}
-
-.hero__subtitle {
-  font-size: $font-size-medium;
-  font-weight: 300;
-  padding: 1.6rem 0;
-
-  
-}
-
-.hero__text {
-  font-family: $font-primary;
-  font-size: $font-size-medium;
-  line-height: 140%;
-
-  @include mq($bp-large) {
-    font-size: $font-size-uppermedium;
-    column-count: 2;
-    column-gap: 4rem;
-    column-fill: balance;
-  }
-
-  @include mq($bp-xlarge) {
-    font-size: $font-size-large;
   }
 }

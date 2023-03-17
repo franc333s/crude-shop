@@ -68,8 +68,8 @@ a:visited {
 
     position: absolute;
     inset: 0 0 auto 0;
-    width: 100vw;
-    height: 100vh;
+    width: $vw-100;
+    height: $vh-100;
 
     transition: all .4s ease;
 
@@ -78,11 +78,11 @@ a:visited {
     &__item {
       padding: 3.2rem 0;
       font-size: $font-size-uppermedium;
-      font-weight: 300;
+      font-weight: $font-weight-light;
 
       &:hover {
         font-style: italic;
-        font-weight: 700;
+        font-weight: $font-weight-bold;
       }
     }
 

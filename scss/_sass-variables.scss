@@ -38,14 +38,17 @@ $font-size-xlarge: calc($unit-base * 13); // 52px
 //Viewports
 $vw-100: 100vw;
 $vh-100: 100vh;
-$vw-50: 50vw;
-$vh-50: 50vh;
 
 
 
 // Fronts
 $font-primary: 'Epilogue', sans-serif;
 $font-secondary: 'JetBrains Mono', monospace;
+
+// Font weights
+$font-weight-light: 300;
+$font-weight-medium: 500;
+$font-weight-bold: 800;
 
 
 
