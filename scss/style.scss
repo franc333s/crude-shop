@@ -1,3 +1,6 @@
+//Wordpress features
+@import "wordpress-theme";
+
 // Sass variables
 @import "sass-variables";
 
@@ -31,6 +34,9 @@
 
 //Reseñas
 @import "reviews";
+
+//Swiper styles
+@import "swiper";
 
 // Footer styles
 @import "footer";

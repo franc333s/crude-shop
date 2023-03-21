@@ -16,7 +16,6 @@ a:visited {
 
 .topbar {
   display: flex;
-  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -34,8 +33,12 @@ a:visited {
   z-index: 3
 }
 
+
+
+
 .topbar--mobile {
   justify-content: space-between;
+  align-items: center;
   padding: .8rem 2rem;
 
   &__menu {
@@ -95,21 +98,15 @@ a:visited {
   }
 }
 
+
+
+
+
 .topbar--desktop {
   justify-content: space-between;
   padding: 1.6rem 4rem;
+  align-items: center;
 
-  &__nav {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    justify-content: space-between;
-
-    &__item {
-      padding: 0 2.4rem;
-    }
-  }
 
   @include mq($bp-large) {
     //min width 1440
@@ -125,6 +122,17 @@ a:visited {
     //max width 767
     display: none;
   }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+
+    list-style: none;
+    padding-left: 0;
+    
+  }
+
 }
 
 // Clases para js del menú desplegable

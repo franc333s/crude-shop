@@ -132,9 +132,11 @@
   }
 
   &__img-slider {
+    padding-bottom: 4rem;
 
     @include mq($bp-medium) {
       display: none;
+      padding-bottom: 0;
       }
     }
 
