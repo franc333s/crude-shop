@@ -22,17 +22,20 @@
 
 
 .footer__element {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     justify-content: center;
-    gap: 1.6rem;
+    align-items: center;
 
     padding: 8rem 2rem;
-    
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    color: $color-beige;
 
     @include mq($bp-medium) {
         //min width 768px
-        flex-direction: row;
+        grid-template-columns: repeat(5, 1fr);
         justify-content: space-between;
         align-items: center;
         gap: 0;
@@ -48,6 +51,38 @@
     @include mq($bp-large) {
         //min width 1920
         padding: 2rem 10rem;
+    }
+
+    &__item {
+        font-size: 2rem;
+        list-style: none;
+
+        & > a {
+            color: $color-beige;
+        }
+
+        & > a:hover {
+            font-style: italic;
+        }
+
+        &--small > a {
+            color: $color-beige;
+            font-size: $font-size-small;
+        }
+
+        &--small > a:hover {
+            font-style: italic;
+        }
+    }
+
+    & &__item {
+        padding-bottom: 2rem;
+
+        @include mq($bp-medium) {
+            padding-bottom: 0;
+        }
+
+
     }
 }
 
