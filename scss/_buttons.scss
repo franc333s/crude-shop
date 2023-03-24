@@ -112,10 +112,13 @@ button,
   }
 }
 
-.btn-half-screen {
+.btn--half-screen {
+  width: 100%;
+  
   @include mq($bp-medium) {
     //min width 768px
     width: 40vw;
+    
   }
 }
 

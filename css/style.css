@@ -209,7 +209,7 @@ a:visited {
 }
 
 .hero__bg-img {
-  background-image: url("https://placekitten.com/200/300");
+  background-image: url("https://esatdev.com/2022/marina/crude/wp-content/themes/crude/imgs/life/hero/crude-bisuteria-unisex_w593.jpg");
   background-color: #FFFFFF;
   height: 70vh;
   background-position: center;
@@ -230,10 +230,31 @@ a:visited {
       -ms-flex-align: center;
           align-items: center;
 }
+@media all and (min-width: 37rem) {
+  .hero__bg-img {
+    background-image: url("https://esatdev.com/2022/marina/crude/wp-content/themes/crude/imgs/life/hero/crude-bisuteria-unisex_w835.jpg");
+  }
+}
+@media all and (min-width: 48rem) {
+  .hero__bg-img {
+    background-image: url("https://esatdev.com/2022/marina/crude/wp-content/themes/crude/imgs/life/hero/crude-bisuteria-unisex_w1050.jpg");
+  }
+}
+@media all and (min-width: 60rem) {
+  .hero__bg-img {
+    background-image: url("https://esatdev.com/2022/marina/crude/wp-content/themes/crude/imgs/life/hero/crude-bisuteria-unisex_w1540.jpg");
+  }
+}
+@media all and (min-width: 90rem) {
+  .hero__bg-img {
+    background-image: url("https://esatdev.com/2022/marina/crude/wp-content/themes/crude/imgs/life/hero/crude-bisuteria-unisex_w2000.jpg");
+  }
+}
 
-.bg-img {
-  background-color: #00FF40;
-  height: 80vh;
+.bg-img > a {
+  background-color: #FFFFFF;
+  width: 100vw;
+  height: auto;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -251,11 +272,6 @@ a:visited {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-@media all and (min-width: 48rem) {
-  .bg-img {
-    height: 75vh;
-  }
 }
 
 h1,
@@ -573,8 +589,11 @@ button,
   color: currentColor;
 }
 
+.btn--half-screen {
+  width: 100%;
+}
 @media all and (min-width: 48rem) {
-  .btn-half-screen {
+  .btn--half-screen {
     width: 40vw;
   }
 }
@@ -1003,8 +1022,11 @@ swiper-slide img {
   }
 }
 
-.footer__newsletter [type=email] {
+.footer__newsletter [type=email],
+#newsletter-form {
   color: #E5E1DB;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.6rem;
   background: none;
   border: 2px solid #E5E1DB;
   border-top: none;
@@ -1016,53 +1038,60 @@ swiper-slide img {
   padding: 1.4rem 0;
   width: 100%;
 }
-.footer__newsletter [type=email]:focus {
+.footer__newsletter [type=email]:focus,
+#newsletter-form:focus {
   background-color: transparent;
   color: #E5E1DB;
   font-family: "JetBrains Mono", monospace;
   font-size: 1.6rem;
   outline: none;
 }
-.footer__newsletter [type=email]::-webkit-input-placeholder {
+.footer__newsletter [type=email]::-webkit-input-placeholder, #newsletter-form::-webkit-input-placeholder {
   color: #E5E1DB;
   font-family: "JetBrains Mono", monospace;
   font-size: 1.6rem;
 }
-.footer__newsletter [type=email]::-moz-placeholder {
+.footer__newsletter [type=email]::-moz-placeholder, #newsletter-form::-moz-placeholder {
   color: #E5E1DB;
   font-family: "JetBrains Mono", monospace;
   font-size: 1.6rem;
 }
-.footer__newsletter [type=email]:-ms-input-placeholder {
+.footer__newsletter [type=email]:-ms-input-placeholder, #newsletter-form:-ms-input-placeholder {
   color: #E5E1DB;
   font-family: "JetBrains Mono", monospace;
   font-size: 1.6rem;
 }
-.footer__newsletter [type=email]::-ms-input-placeholder {
+.footer__newsletter [type=email]::-ms-input-placeholder, #newsletter-form::-ms-input-placeholder {
   color: #E5E1DB;
   font-family: "JetBrains Mono", monospace;
   font-size: 1.6rem;
 }
-.footer__newsletter [type=email]::placeholder {
+.footer__newsletter [type=email]::placeholder,
+#newsletter-form::placeholder {
   color: #E5E1DB;
   font-family: "JetBrains Mono", monospace;
   font-size: 1.6rem;
 }
-.footer__newsletter [type=email]:-ms-input-placeholder {
+.footer__newsletter [type=email]:-ms-input-placeholder,
+#newsletter-form:-ms-input-placeholder {
   color: #E5E1DB;
   font-family: "JetBrains Mono", monospace;
   font-size: 1.6rem;
 }
 @media all and (min-width: 48rem) {
-  .footer__newsletter [type=email] {
+  .footer__newsletter [type=email],
+#newsletter-form {
     width: 45%;
     margin-right: 4rem;
   }
 }
 
 .contact-form [type=email],
-.contact-form [type=text] {
+.contact-form [type=text],
+#name-contact-form,
+#email-contact-form {
   color: #0F0F0F;
+  font-family: "JetBrains Mono", monospace;
   background: none;
   border: 2px solid #0F0F0F;
   border-top: none;
@@ -1075,59 +1104,69 @@ swiper-slide img {
   width: 100%;
 }
 .contact-form [type=email]:focus,
-.contact-form [type=text]:focus {
+.contact-form [type=text]:focus,
+#name-contact-form:focus,
+#email-contact-form:focus {
   background-color: transparent;
   color: #0F0F0F;
   font-family: "JetBrains Mono", monospace;
   font-size: 1.6rem;
   outline: none;
 }
-.contact-form [type=email]::-webkit-input-placeholder, .contact-form [type=text]::-webkit-input-placeholder {
+.contact-form [type=email]::-webkit-input-placeholder, .contact-form [type=text]::-webkit-input-placeholder, #name-contact-form::-webkit-input-placeholder, #email-contact-form::-webkit-input-placeholder {
   color: #0F0F0F;
   font-family: "JetBrains Mono", monospace;
   font-size: 1.6rem;
 }
-.contact-form [type=email]::-moz-placeholder, .contact-form [type=text]::-moz-placeholder {
+.contact-form [type=email]::-moz-placeholder, .contact-form [type=text]::-moz-placeholder, #name-contact-form::-moz-placeholder, #email-contact-form::-moz-placeholder {
   color: #0F0F0F;
   font-family: "JetBrains Mono", monospace;
   font-size: 1.6rem;
 }
-.contact-form [type=email]:-ms-input-placeholder, .contact-form [type=text]:-ms-input-placeholder {
+.contact-form [type=email]:-ms-input-placeholder, .contact-form [type=text]:-ms-input-placeholder, #name-contact-form:-ms-input-placeholder, #email-contact-form:-ms-input-placeholder {
   color: #0F0F0F;
   font-family: "JetBrains Mono", monospace;
   font-size: 1.6rem;
 }
-.contact-form [type=email]::-ms-input-placeholder, .contact-form [type=text]::-ms-input-placeholder {
+.contact-form [type=email]::-ms-input-placeholder, .contact-form [type=text]::-ms-input-placeholder, #name-contact-form::-ms-input-placeholder, #email-contact-form::-ms-input-placeholder {
   color: #0F0F0F;
   font-family: "JetBrains Mono", monospace;
   font-size: 1.6rem;
 }
 .contact-form [type=email]::placeholder,
-.contact-form [type=text]::placeholder {
+.contact-form [type=text]::placeholder,
+#name-contact-form::placeholder,
+#email-contact-form::placeholder {
   color: #0F0F0F;
   font-family: "JetBrains Mono", monospace;
   font-size: 1.6rem;
 }
 .contact-form [type=email]:-ms-input-placeholder,
-.contact-form [type=text]:-ms-input-placeholder {
+.contact-form [type=text]:-ms-input-placeholder,
+#name-contact-form:-ms-input-placeholder,
+#email-contact-form:-ms-input-placeholder {
   color: #0F0F0F;
   font-family: "JetBrains Mono", monospace;
   font-size: 1.6rem;
 }
 @media all and (min-width: 90rem) {
   .contact-form [type=email],
-.contact-form [type=text] {
+.contact-form [type=text],
+#name-contact-form,
+#email-contact-form {
     padding-top: 4rem;
   }
 }
 
-.contact-form [placeholder="¿QUÉ NOS CUENTAS?"] {
+.contact-form [placeholder="¿QUÉ NOS CUENTAS?"],
+#text-contact-form {
   margin-top: 10rem;
   margin-bottom: 10rem;
+  font-family: "JetBrains Mono", monospace;
 }
 
 @media all and (min-width: 48rem) {
-  .contact-form__name-email {
+  .contact-form__name-email > p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

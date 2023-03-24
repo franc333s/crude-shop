@@ -1,44 +1,51 @@
 @mixin mq($bp: $bp-medium, $bp-width: min-width) {
-    @media all and ($bp-width: $bp) {
-        @content;
-    }
+  @media all and ($bp-width: $bp) {
+    @content;
+  }
 }
-
 
 .hero__bg-img {
-    background-image: url("https://placekitten.com/200/300");
-    background-color: $color-white;
-    height: 70vh;
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-size: cover;
-    margin-top: 0;
+  background-image: url("https://esatdev.com/2022/marina/crude/wp-content/themes/crude/imgs/life/hero/crude-bisuteria-unisex_w593.jpg");
+  background-color: $color-white;
+  height: 70vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 0;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
+  @include mq($bp-lowermedium) {
+    background-image: url("https://esatdev.com/2022/marina/crude/wp-content/themes/crude/imgs/life/hero/crude-bisuteria-unisex_w835.jpg");
+  }
+
+  @include mq($bp-medium) {
+    background-image: url("https://esatdev.com/2022/marina/crude/wp-content/themes/crude/imgs/life/hero/crude-bisuteria-unisex_w1050.jpg");
+  }
+
+  @include mq($bp-uppermedium) {
+    background-image: url("https://esatdev.com/2022/marina/crude/wp-content/themes/crude/imgs/life/hero/crude-bisuteria-unisex_w1540.jpg");
+  }
+
+  @include mq($bp-large) {
+    background-image: url("https://esatdev.com/2022/marina/crude/wp-content/themes/crude/imgs/life/hero/crude-bisuteria-unisex_w2000.jpg");
+  }
 }
 
+.bg-img > a {
+  background-color: $color-bg-white;
+  width: 100vw;
+  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 0;
 
-
-.bg-img {
-    background-color: $color-bg-green;
-    height: 80vh;
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-size: cover;
-    margin-top: 0;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    @include mq($bp-medium) {
-        height: calc( $vh-100 * 3 / 4 );
-    }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
-

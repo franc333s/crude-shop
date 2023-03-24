@@ -13,8 +13,12 @@ $bp-xlarge: 120rem; // 1920px
 
 // Newsletter suscription
 
-.footer__newsletter [type="email"] {
+
+.footer__newsletter [type="email"],
+#newsletter-form {
     color: $color-beige;
+    font-family: $font-secondary;
+    font-size: $font-size-small;
 	background: none;
     border: 2px solid $color-beige;
 	border-top: none;
@@ -62,8 +66,11 @@ $bp-xlarge: 120rem; // 1920px
 // Contant form
 
 .contact-form [type="email"],
-.contact-form [type="text"] {
+.contact-form [type="text"],
+#name-contact-form,
+#email-contact-form {
     color: $color-black;
+    font-family: $font-secondary;
 	background: none;
     border: 2px solid $color-black;
 	border-top: none;
@@ -104,12 +111,14 @@ $bp-xlarge: 120rem; // 1920px
     }
 }
 
-.contact-form [placeholder="¿QUÉ NOS CUENTAS?"] {
+.contact-form [placeholder="¿QUÉ NOS CUENTAS?"],
+#text-contact-form {
     margin-top: 10rem;
     margin-bottom: 10rem;
+    font-family: $font-secondary;
 }
 
-.contact-form__name-email {
+.contact-form__name-email > p {
 
     @include mq($bp-medium) {
         //min width 768px
