@@ -80,26 +80,30 @@ p {
 
 
 // Product item font sizes
-.product-detail__description {
+.woocommerce-product-details__short-description {
   font-size: $font-size-lowermedium;
-  padding-bottom: 4rem;
+  font-weight: 300;
+  
 
   @include mq($bp-medium) {
-    padding-bottom: 6rem;
+    
   }
 
   @include mq($bp-large) {
-    padding-bottom: 8rem;
+    
   }
 
   @include mq($bp-xlarge) {
-    padding-bottom: 10rem;
+    
   }
 }
-
-.product-detail__price {
+.woocommerce-product-details__short-description,
+.product-detail__price,
+.entry-summary > .price > .woocommerce-Price-amount {
+  //amount is a wp class
   font-family: $font-primary;
   font-size: $font-size-uppermedium;
+  color: $color-black;
   padding: 2rem 0;
 
   @include mq($bp-large) {

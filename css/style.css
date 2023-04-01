@@ -39,16 +39,19 @@ section {
 @media all and (min-width: 48rem) {
   .main--padding {
     padding: 8rem 4rem;
+    padding-bottom: 0;
   }
 }
 @media all and (min-width: 90rem) {
   .main--padding {
     padding: 8rem;
+    padding-bottom: 0;
   }
 }
 @media all and (min-width: 120rem) {
   .main--padding {
     padding: 8rem 10rem;
+    padding-bottom: 0;
   }
 }
 
@@ -76,7 +79,7 @@ section {
 }
 @media all and (min-width: 48rem) {
   .body--padding-top {
-    padding-top: 7.5rem;
+    padding-top: 8.75rem;
   }
 }
 
@@ -209,7 +212,7 @@ a:visited {
 }
 
 .hero__bg-img {
-  background-image: url("https://esatdev.com/2022/marina/crude/wp-content/themes/crude/imgs/life/hero/crude-bisuteria-unisex_w593.jpg");
+  background-image: url("https://esatdev.com/2022/marina/crude/wp-content/themes/crude/imgs/life/hero/crude-bisuteria-unisex_w1050.jpg");
   background-color: #FFFFFF;
   height: 70vh;
   background-position: center;
@@ -230,17 +233,7 @@ a:visited {
       -ms-flex-align: center;
           align-items: center;
 }
-@media all and (min-width: 37rem) {
-  .hero__bg-img {
-    background-image: url("https://esatdev.com/2022/marina/crude/wp-content/themes/crude/imgs/life/hero/crude-bisuteria-unisex_w835.jpg");
-  }
-}
 @media all and (min-width: 48rem) {
-  .hero__bg-img {
-    background-image: url("https://esatdev.com/2022/marina/crude/wp-content/themes/crude/imgs/life/hero/crude-bisuteria-unisex_w1050.jpg");
-  }
-}
-@media all and (min-width: 60rem) {
   .hero__bg-img {
     background-image: url("https://esatdev.com/2022/marina/crude/wp-content/themes/crude/imgs/life/hero/crude-bisuteria-unisex_w1540.jpg");
   }
@@ -251,7 +244,7 @@ a:visited {
   }
 }
 
-.bg-img > a {
+.bg-img > img {
   background-color: #FFFFFF;
   width: 100vw;
   height: auto;
@@ -283,7 +276,7 @@ h4 {
 
 h1,
 .h1 {
-  font-family: "Epilogue", sans-serif;
+  font-family: "Epilogue", Helvetica, Arial, sans-serif;
   font-size: 3.6rem;
   padding-bottom: 2rem;
 }
@@ -302,7 +295,7 @@ h1,
 
 h2,
 .h2 {
-  font-family: "Epilogue", sans-serif;
+  font-family: "Epilogue", Helvetica, Arial, sans-serif;
   font-size: 3.6rem;
   padding-bottom: 1.6rem;
 }
@@ -363,13 +356,13 @@ p {
 }
 
 .font-family--secondary--italic {
-  font-family: "JetBrains Mono", monospace;
+  font-family: "JetBrains Mono", "Courier New", Courier, monospace;
   font-style: italic;
   font-weight: 800;
 }
 
 .hero__title {
-  font-family: "Epilogue", sans-serif;
+  font-family: "Epilogue", Helvetica, Arial, sans-serif;
   font-size: 1.6rem;
 }
 .hero__subtitle {
@@ -378,7 +371,7 @@ p {
   padding: 1.6rem 0;
 }
 .hero__text {
-  font-family: "Epilogue", sans-serif;
+  font-family: "Epilogue", Helvetica, Arial, sans-serif;
   font-size: 2.8rem;
   line-height: 140%;
 }
@@ -402,38 +395,29 @@ p {
   }
 }
 
-.product-detail__description {
+.woocommerce-product-details__short-description {
   font-size: 2rem;
-  padding-bottom: 4rem;
+  font-weight: 300;
 }
-@media all and (min-width: 48rem) {
-  .product-detail__description {
-    padding-bottom: 6rem;
-  }
-}
-@media all and (min-width: 90rem) {
-  .product-detail__description {
-    padding-bottom: 8rem;
-  }
-}
-@media all and (min-width: 120rem) {
-  .product-detail__description {
-    padding-bottom: 10rem;
-  }
-}
-
-.product-detail__price {
-  font-family: "Epilogue", sans-serif;
+.woocommerce-product-details__short-description,
+.product-detail__price,
+.entry-summary > .price > .woocommerce-Price-amount {
+  font-family: "Epilogue", Helvetica, Arial, sans-serif;
   font-size: 3.6rem;
+  color: #0F0F0F;
   padding: 2rem 0;
 }
 @media all and (min-width: 90rem) {
-  .product-detail__price {
+  .woocommerce-product-details__short-description,
+.product-detail__price,
+.entry-summary > .price > .woocommerce-Price-amount {
     font-size: 4.4rem;
   }
 }
 @media all and (min-width: 120rem) {
-  .product-detail__price {
+  .woocommerce-product-details__short-description,
+.product-detail__price,
+.entry-summary > .price > .woocommerce-Price-amount {
     font-size: 5.2rem;
   }
 }
@@ -514,7 +498,7 @@ button,
   border: none;
   color: currentColor;
   background-color: transparent;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "JetBrains Mono", "Courier New", Courier, monospace;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
@@ -554,7 +538,7 @@ button,
 }
 
 .btn--color-beige {
-  font-family: "JetBrains Mono", monospace;
+  font-family: "JetBrains Mono", "Courier New", Courier, monospace;
   color: #E5E1DB;
   border: solid 0.2rem #E5E1DB;
   background-color: transparent;
@@ -567,16 +551,34 @@ button,
   color: #0F0F0F;
 }
 
-.btn--add-to-cart {
-  border: none;
+.btn--add-to-cart,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt {
   background-color: #EFFF3D;
   border: solid 0.2rem #EFFF3D;
+  font-family: "JetBrains Mono", "Courier New", Courier, monospace;
+  font-size: 2rem;
+  color: #0F0F0F;
+  text-transform: uppercase;
+  padding: 1.2rem 0;
+  width: 100%;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
-.btn--add-to-cart:visited {
+@media all and (min-width: 37rem) {
+  .btn--add-to-cart,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt {
+    width: auto;
+    padding: 1.2rem 4rem;
+  }
+}
+.btn--add-to-cart:visited,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt:visited {
   color: #0F0F0F;
 }
-.btn--add-to-cart:hover {
-  border: none;
+.btn--add-to-cart:hover,
+.btn--add-to-cart .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt:hover,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt:hover,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt:hover {
   background-color: #0F0F0F;
   border: solid 0.2rem #0F0F0F;
   color: #E5E1DB;
@@ -720,7 +722,7 @@ button,
 }
 
 .catalogue__item__marker {
-  font-family: "Epilogue", sans-serif;
+  font-family: "Epilogue", Helvetica, Arial, sans-serif;
   font-size: 2rem;
   text-transform: uppercase;
   background-color: #00FF40;
@@ -775,6 +777,11 @@ button,
     display: none;
     padding-bottom: 0;
   }
+}
+.product-detail__description {
+  font-size: 2rem;
+  font-weight: 300;
+  padding-bottom: 4rem;
 }
 .product-detail__imgs {
   display: none;
@@ -845,6 +852,150 @@ button,
 
 .active-accordion {
   border-bottom: none;
+}
+
+/* PRODUCTO */
+.product-main-images {
+  /* clase imagen ACF */
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2rem 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.product-main-images > img {
+  /* imagenes dentro de la clase */
+  background-color: #FFFFFF;
+  height: 70vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding-bottom: 2rem;
+}
+
+.woocommerce div.product .product_title {
+  /* H1 del producto */
+  padding: 4rem 0 2rem;
+}
+
+.woocommerce-product-details__short-description {
+  /* P descripción */
+  font-size: 2rem;
+  font-weight: 300;
+}
+.woocommerce-product-details__short-description ~ .price {
+  /* Precio */
+  padding: 4rem 0;
+}
+
+.woocommerce div.product div.summary,
+.div.product div.summary {
+  /* Evita movimiento summary */
+  float: none;
+  width: 100%;
+}
+
+.product-gallery {
+  /* Galeria de imagenes pintadas con acf */
+  list-style: none;
+  padding: 0 0 4rem;
+  margin-top: 0;
+}
+.product-gallery__item + .product-gallery__item {
+  padding-top: 2rem;
+}
+
+.type-product {
+  /* Añade grid a fotos y summary, afecta también a la parte inferior */
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  padding: 4rem 2rem 8rem;
+}
+@media all and (min-width: 48rem) {
+  .type-product {
+    padding: 4rem 4rem 0;
+    -ms-grid-columns: 1fr 2.8rem 1fr;
+    grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 2.8rem;
+       -moz-column-gap: 2.8rem;
+            column-gap: 2.8rem;
+  }
+}
+@media all and (min-width: 90rem) {
+  .type-product {
+    padding: 8rem 8rem 0;
+    -ms-grid-columns: 5fr 3.6rem 3fr;
+    grid-template-columns: 5fr 3fr;
+    -webkit-column-gap: 3.6rem;
+       -moz-column-gap: 3.6rem;
+            column-gap: 3.6rem;
+  }
+}
+@media all and (min-width: 120rem) {
+  .type-product {
+    padding: 8rem 10rem 0;
+    -ms-grid-columns: 5fr 4.8rem 3fr;
+    grid-template-columns: 5fr 3fr;
+    -webkit-column-gap: 4.8rem;
+       -moz-column-gap: 4.8rem;
+            column-gap: 4.8rem;
+  }
+}
+
+/* Productos relacionados en producto */
+.woocommerce ul.products li.product .woocommerce-loop-product__title {
+  font-size: 2rem;
+}
+
+.woocommerce ul.products li.product .woocommerce-loop-product__title + .price {
+  font-size: 2rem;
+  font-family: "Epilogue", Helvetica, Arial, sans-serif;
+  color: #0F0F0F;
+}
+
+/* CATÁLOGO */
+.woocommerce ul.products li.product,
+.woocommerce-page ul.products li.product {
+  float: none;
+  width: 100%;
+}
+
+.columns-4 > .type-product {
+  -ms-grid-columns: none;
+  grid-template-columns: none;
+}
+
+.woocommerce ul.products[class*=columns-] li.product,
+.woocommerce-page ul.products[class*=columns-] li.product {
+  float: none;
+  width: 100%;
+}
+
+.woocommerce .products ul::after,
+.woocommerce .products ul::before,
+.woocommerce ul.products::after,
+.woocommerce ul.products::before {
+  display: none;
+}
+
+.woocommerce .products ul,
+.woocommerce ul.products {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+}
+@media all and (min-width: 48rem) {
+  .woocommerce .products ul,
+.woocommerce ul.products {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 2.4rem 1fr 2.4rem 1fr 2.4rem 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.4rem;
+  }
 }
 
 .section__reviews {
@@ -1022,10 +1173,19 @@ swiper-slide img {
   }
 }
 
+.wp-block-group__inner-container {
+  all: inherit;
+  width: 100%;
+  height: 100%;
+  margin: initial;
+  padding: initial;
+  background-color: transparent;
+}
+
 .footer__newsletter [type=email],
 #newsletter-form {
   color: #E5E1DB;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "JetBrains Mono", "Courier New", Courier, monospace;
   font-size: 1.6rem;
   background: none;
   border: 2px solid #E5E1DB;
@@ -1042,40 +1202,40 @@ swiper-slide img {
 #newsletter-form:focus {
   background-color: transparent;
   color: #E5E1DB;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "JetBrains Mono", "Courier New", Courier, monospace;
   font-size: 1.6rem;
   outline: none;
 }
 .footer__newsletter [type=email]::-webkit-input-placeholder, #newsletter-form::-webkit-input-placeholder {
   color: #E5E1DB;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "JetBrains Mono", "Courier New", Courier, monospace;
   font-size: 1.6rem;
 }
 .footer__newsletter [type=email]::-moz-placeholder, #newsletter-form::-moz-placeholder {
   color: #E5E1DB;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "JetBrains Mono", "Courier New", Courier, monospace;
   font-size: 1.6rem;
 }
 .footer__newsletter [type=email]:-ms-input-placeholder, #newsletter-form:-ms-input-placeholder {
   color: #E5E1DB;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "JetBrains Mono", "Courier New", Courier, monospace;
   font-size: 1.6rem;
 }
 .footer__newsletter [type=email]::-ms-input-placeholder, #newsletter-form::-ms-input-placeholder {
   color: #E5E1DB;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "JetBrains Mono", "Courier New", Courier, monospace;
   font-size: 1.6rem;
 }
 .footer__newsletter [type=email]::placeholder,
 #newsletter-form::placeholder {
   color: #E5E1DB;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "JetBrains Mono", "Courier New", Courier, monospace;
   font-size: 1.6rem;
 }
 .footer__newsletter [type=email]:-ms-input-placeholder,
 #newsletter-form:-ms-input-placeholder {
   color: #E5E1DB;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "JetBrains Mono", "Courier New", Courier, monospace;
   font-size: 1.6rem;
 }
 @media all and (min-width: 48rem) {
@@ -1091,7 +1251,7 @@ swiper-slide img {
 #name-contact-form,
 #email-contact-form {
   color: #0F0F0F;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "JetBrains Mono", "Courier New", Courier, monospace;
   background: none;
   border: 2px solid #0F0F0F;
   border-top: none;
@@ -1109,28 +1269,28 @@ swiper-slide img {
 #email-contact-form:focus {
   background-color: transparent;
   color: #0F0F0F;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "JetBrains Mono", "Courier New", Courier, monospace;
   font-size: 1.6rem;
   outline: none;
 }
 .contact-form [type=email]::-webkit-input-placeholder, .contact-form [type=text]::-webkit-input-placeholder, #name-contact-form::-webkit-input-placeholder, #email-contact-form::-webkit-input-placeholder {
   color: #0F0F0F;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "JetBrains Mono", "Courier New", Courier, monospace;
   font-size: 1.6rem;
 }
 .contact-form [type=email]::-moz-placeholder, .contact-form [type=text]::-moz-placeholder, #name-contact-form::-moz-placeholder, #email-contact-form::-moz-placeholder {
   color: #0F0F0F;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "JetBrains Mono", "Courier New", Courier, monospace;
   font-size: 1.6rem;
 }
 .contact-form [type=email]:-ms-input-placeholder, .contact-form [type=text]:-ms-input-placeholder, #name-contact-form:-ms-input-placeholder, #email-contact-form:-ms-input-placeholder {
   color: #0F0F0F;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "JetBrains Mono", "Courier New", Courier, monospace;
   font-size: 1.6rem;
 }
 .contact-form [type=email]::-ms-input-placeholder, .contact-form [type=text]::-ms-input-placeholder, #name-contact-form::-ms-input-placeholder, #email-contact-form::-ms-input-placeholder {
   color: #0F0F0F;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "JetBrains Mono", "Courier New", Courier, monospace;
   font-size: 1.6rem;
 }
 .contact-form [type=email]::placeholder,
@@ -1138,7 +1298,7 @@ swiper-slide img {
 #name-contact-form::placeholder,
 #email-contact-form::placeholder {
   color: #0F0F0F;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "JetBrains Mono", "Courier New", Courier, monospace;
   font-size: 1.6rem;
 }
 .contact-form [type=email]:-ms-input-placeholder,
@@ -1146,7 +1306,7 @@ swiper-slide img {
 #name-contact-form:-ms-input-placeholder,
 #email-contact-form:-ms-input-placeholder {
   color: #0F0F0F;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "JetBrains Mono", "Courier New", Courier, monospace;
   font-size: 1.6rem;
 }
 @media all and (min-width: 90rem) {
@@ -1162,7 +1322,7 @@ swiper-slide img {
 #text-contact-form {
   margin-top: 10rem;
   margin-bottom: 10rem;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "JetBrains Mono", "Courier New", Courier, monospace;
 }
 
 @media all and (min-width: 48rem) {

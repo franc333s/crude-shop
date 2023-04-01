@@ -23,7 +23,6 @@
 }
 
 
-
 .catalogue--frontpage {
   display: grid;
   grid-template-columns: 100%;
@@ -40,8 +39,8 @@
 }
 
 
-// NOU
 .catalogue--related-products {
+  // clar for wp fix
   display: none;
 
   @include mq($bp-medium) {
@@ -54,8 +53,6 @@
   }
 }
 
-
-// FINAL NOU
 
 .catalogue__item__img {
   object-fit: cover;
@@ -140,6 +137,12 @@
       }
     }
 
+  &__description {
+      font-size: $font-size-lowermedium;
+      font-weight: $font-weight-light;
+      padding-bottom: 4rem;
+    }
+
   &__imgs {
 
     display: none;
@@ -164,6 +167,8 @@
     }
   }
 
+
+
   &--modify-paddings {
     // Removeing padding on top of second grid in product page
     padding-top: 0;
@@ -173,12 +178,7 @@
       padding-bottom: 8rem;
     }
   }
-
 }
-
-
-
-
 
 
 
@@ -230,5 +230,150 @@
 .active-accordion {
   border-bottom: none;
 }
+
+
+
+
+
+
+// STYLES TO FIX WORDPRESS CLASSES
+
+/* PRODUCTO */
+
+.product-main-images {
+  /* clase imagen ACF */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+
+  & > img {
+    /* imagenes dentro de la clase */
+    background-color: #FFFFFF;
+    height: 70vh;
+    width: 100%;
+    object-fit: cover;
+    padding-bottom: 2rem;
+
+  }
+
+}
+
+.woocommerce div.product .product_title {
+  /* H1 del producto */
+  padding: 4rem 0 2rem;
+}
+
+.woocommerce-product-details__short-description {
+  /* P descripción */
+  font-size: $font-size-lowermedium;
+  font-weight: $font-weight-light;
+
+  &  ~ .price {
+    /* Precio */
+    padding: 4rem 0;
+  }
+}
+
+
+.woocommerce div.product div.summary, 
+.div.product div.summary  {
+  /* Evita movimiento summary */
+  float: none;
+  width: 100%;
+}
+
+
+
+.product-gallery {
+  /* Galeria de imagenes pintadas con acf */
+  list-style: none;
+  padding: 0 0 4rem;
+  margin-top: 0;
+
+  &__item + &__item {
+    padding-top: 2rem;
+  }
+}
+
+
+
+.type-product {
+  /* Añade grid a fotos y summary, afecta también a la parte inferior */
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 4rem 2rem 8rem;
+
+  @include mq($bp-medium) {
+    padding: 4rem 4rem 0;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2.8rem;
+  }
+
+  @include mq($bp-large) {
+    padding: 8rem 8rem 0;
+    grid-template-columns: 5fr 3fr;
+    column-gap: 3.6rem;
+  }
+
+  @include mq($bp-xlarge) {
+    padding: 8rem 10rem 0;
+    grid-template-columns: 5fr 3fr;
+    column-gap: 4.8rem;
+  }
+}
+
+/* Productos relacionados en producto */
+
+.woocommerce ul.products li.product .woocommerce-loop-product__title {
+  font-size: $font-size-lowermedium;
+}
+
+.woocommerce ul.products li.product .woocommerce-loop-product__title + .price {
+  font-size: $font-size-lowermedium;
+  font-family: $font-primary;
+  color: $color-black;
+
+}
+
+
+
+/* CATÁLOGO */
+
+.woocommerce ul.products li.product, 
+.woocommerce-page ul.products li.product {
+  float: none;
+  width: 100%;
+}
+
+.columns-4 > .type-product {
+  grid-template-columns: none;
+}
+
+.woocommerce ul.products[class*=columns-] li.product, 
+.woocommerce-page ul.products[class*=columns-] li.product {
+  float: none;
+  width: 100%;
+}
+
+.woocommerce .products ul::after, 
+.woocommerce .products ul::before, 
+.woocommerce ul.products::after, 
+.woocommerce ul.products::before {
+  display: none;
+}
+
+
+.woocommerce .products ul,
+.woocommerce ul.products {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include mq($bp-medium) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.4rem;
+  }
+ }
+
 
 

@@ -81,18 +81,30 @@ button,
   }
 }
 
-// Styles of button Add to cart
-.btn--add-to-cart {
-  border: none;
+// Styles of button Add to cart, it includes styles for wp
+.btn--add-to-cart,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt {
   background-color: $color-bg-yellow;
   border: solid 0.2rem $color-yellow;
+  font-family: $font-secondary;
+  font-size: $font-size-lowermedium;
+  color: $color-black;
+  text-transform: uppercase;
+  padding: 1.2rem 0;
+  width: 100%;
+  transition: 0.3s ease-in-out;
+
+  @include mq($bp-lowermedium) {
+    width: auto;
+    padding: 1.2rem 4rem;
+  }
 
   &:visited {
     color: $color-black;
   }
 
-  &:hover {
-    border: none;
+  &:hover,
+  .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt:hover {
     background-color: $color-bg-black;
     border: solid 0.2rem $color-black;
     color: $color-beige;

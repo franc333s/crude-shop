@@ -11,21 +11,25 @@ section {
 }
 
 .main--padding {
+    // Fix padding-bottom in wp in sprint2
     padding: 4rem 2rem 8rem;
 
     @include mq($bp-medium) {
         //min width 768px
         padding: 8rem 4rem;
+        padding-bottom: 0;
     }
 
     @include mq($bp-large) {
         //min width 1440
         padding: 8rem;
+        padding-bottom: 0;
     }
 
     @include mq($bp-xlarge) {
         //min width 1920
         padding: 8rem 10rem;
+        padding-bottom: 0;
     }
 }
 
@@ -55,7 +59,7 @@ section {
 
     @include mq($bp-medium) {
         //min width 768
-        padding-top: 7.5rem;
+        padding-top: 8.75rem;
     }
 }
 
