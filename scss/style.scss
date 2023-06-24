@@ -1,5 +1,11 @@
-//Wordpress features
-@import "wordpress-theme";
+/*
+Theme Name: Crude
+Theme URI: https://crudecrude.com
+Description: Theme for Crude online shop. 
+Author: Marina
+Author URI: https://franc3s.es
+Version: 1.0
+*/
 
 // Sass variables
 @import "sass-variables";
@@ -9,9 +15,6 @@
 
 // General margins
 @import "margins";
-
-// Media queries
-//@import "media-queries";
 
 // Topbar
 @import "topbar";

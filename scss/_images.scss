@@ -5,7 +5,7 @@
 }
 
 .hero__bg-img {
-  background-image: url("https://esatdev.com/2022/marina/crude/wp-content/themes/crude/imgs/life/hero/crude-bisuteria-unisex_w1050.jpg");
+  background-image: url("");
   background-color: $color-white;
   height: 70vh;
   background-position: center;
@@ -19,11 +19,11 @@
   align-items: center;
 
   @include mq($bp-medium) {
-    background-image: url("https://esatdev.com/2022/marina/crude/wp-content/themes/crude/imgs/life/hero/crude-bisuteria-unisex_w1540.jpg");
+    background-image: url("");
   }
 
   @include mq($bp-large) {
-    background-image: url("https://esatdev.com/2022/marina/crude/wp-content/themes/crude/imgs/life/hero/crude-bisuteria-unisex_w2000.jpg");
+    background-image: url("");
   }
 }
 

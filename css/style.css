@@ -20,7 +20,7 @@ html {
 }
 
 body {
-  font-family: "JetBrains Mono", monospace;
+  font-family: "JetBrains Mono", "Courier New", Courier, monospace;
   background-color: #FFFFFF;
   color: #0F0F0F;
   margin: 0;
@@ -39,19 +39,16 @@ section {
 @media all and (min-width: 48rem) {
   .main--padding {
     padding: 8rem 4rem;
-    padding-bottom: 0;
   }
 }
 @media all and (min-width: 90rem) {
   .main--padding {
     padding: 8rem;
-    padding-bottom: 0;
   }
 }
 @media all and (min-width: 120rem) {
   .main--padding {
     padding: 8rem 10rem;
-    padding-bottom: 0;
   }
 }
 
@@ -61,16 +58,19 @@ section {
 @media all and (max-width: 1440px) and (min-width: 768px) {
   .hero--padding {
     padding: 4rem 4rem;
+    padding-bottom: 0;
   }
 }
 @media all and (min-width: 90rem) {
   .hero--padding {
     padding: 8rem 8rem;
+    padding-bottom: 0;
   }
 }
 @media all and (min-width: 120rem) {
   .hero--padding {
     padding: 8rem 10rem;
+    padding-bottom: 0;
   }
 }
 
@@ -89,47 +89,77 @@ a {
 }
 
 a:visited {
-  color: #0F0F0F;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .topbar {
+  background-color: #E5E1DB;
+  border: none;
+  border-bottom: 2px solid #0F0F0F;
+  padding: 2rem 0;
+  text-transform: uppercase;
+  font-size: 1.6rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  margin: 0;
-  background-color: #E5E1DB;
-  border-bottom: 2px #0F0F0F solid;
-  list-style: none;
-  text-transform: uppercase;
-  border-bottom: 2px #0F0F0F solid;
-  font-size: 1.6rem;
-  z-index: 3;
 }
-
-.topbar--mobile {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.topbar__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0.8rem 2rem;
+  width: calc(50% + 2.8rem);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
-.topbar--mobile__menu {
-  font-size: 1.6rem;
+@media all and (min-width: 48rem) {
+  .topbar__left {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    width: calc(50% + 17.6422rem);
+  }
+}
+.topbar__left__input {
+  cursor: pointer;
   border: none;
-  padding: 0;
+  background-color: transparent;
+  font-family: "JetBrains Mono", "Courier New", Courier, monospace;
+  font-size: 1.6rem;
+  margin-left: 2rem;
+  height: 2rem;
 }
-.topbar--mobile__logo {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+@media all and (min-width: 48rem) {
+  .topbar__left__input {
+    display: none;
+  }
 }
-.topbar--mobile__nav {
+@media all and (min-width: 48rem) {
+  .topbar__left__logo {
+    margin-left: 2rem;
+  }
+}
+.topbar__left__nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -137,6 +167,7 @@ a:visited {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 2.8rem;
   background-color: #00FF40;
   opacity: 0.95;
   color: #0F0F0F;
@@ -146,65 +177,26 @@ a:visited {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  list-style: none;
-  text-align: center;
-  padding: 2.8rem 0;
   position: absolute;
   inset: 0 0 auto 0;
   width: 100vw;
   height: 100vh;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-}
-.topbar--mobile__nav__item {
-  padding: 3.2rem 0;
-  font-size: 3.6rem;
-  font-weight: 300;
-}
-.topbar--mobile__nav__item:hover {
-  font-style: italic;
-  font-weight: 800;
 }
 @media all and (min-width: 48rem) {
-  .topbar--mobile {
-    display: none;
+  .topbar__left__nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    background-color: #E5E1DB;
+    position: static;
+    inset: auto;
+    width: auto;
+    height: auto;
   }
 }
-
-.topbar--desktop {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 1.6rem 4rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-@media all and (min-width: 90rem) {
-  .topbar--desktop {
-    padding: 1.6rem 8rem;
-  }
-}
-@media all and (min-width: 120rem) {
-  .topbar--desktop {
-    padding: 1.6rem 10rem;
-  }
-}
-@media all and (max-width: 767px) {
-  .topbar--desktop {
-    display: none;
-  }
-}
-.topbar--desktop__nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  gap: 4rem;
-  list-style: none;
-  padding-left: 0;
+.topbar__right__cart {
+  margin-right: 2rem;
 }
 
 .jsHide {
@@ -212,7 +204,7 @@ a:visited {
 }
 
 .hero__bg-img {
-  background-image: url("https://esatdev.com/2022/marina/crude/wp-content/themes/crude/imgs/life/hero/crude-bisuteria-unisex_w1050.jpg");
+  background-image: url("");
   background-color: #FFFFFF;
   height: 70vh;
   background-position: center;
@@ -235,12 +227,12 @@ a:visited {
 }
 @media all and (min-width: 48rem) {
   .hero__bg-img {
-    background-image: url("https://esatdev.com/2022/marina/crude/wp-content/themes/crude/imgs/life/hero/crude-bisuteria-unisex_w1540.jpg");
+    background-image: url("");
   }
 }
 @media all and (min-width: 90rem) {
   .hero__bg-img {
-    background-image: url("https://esatdev.com/2022/marina/crude/wp-content/themes/crude/imgs/life/hero/crude-bisuteria-unisex_w2000.jpg");
+    background-image: url("");
   }
 }
 
@@ -877,15 +869,31 @@ button,
   /* H1 del producto */
   padding: 4rem 0 2rem;
 }
+@media all and (min-width: 48rem) {
+  .woocommerce div.product .product_title {
+    padding: 0 0 2rem;
+  }
+}
 
-.woocommerce-product-details__short-description {
+.woocommerce-product-details__short-description > p {
   /* P descripción */
+  font-family: "JetBrains Mono", "Courier New", Courier, monospace;
   font-size: 2rem;
   font-weight: 300;
 }
-.woocommerce-product-details__short-description ~ .price {
+.woocommerce-product-details__short-description > p ~ .price {
   /* Precio */
   padding: 4rem 0;
+}
+
+.input-text {
+  /* Elimina campo de num de productos */
+  display: none;
+}
+
+form.cart {
+  /* Margen superior al btn */
+  margin-top: 4rem;
 }
 
 .woocommerce div.product div.summary,

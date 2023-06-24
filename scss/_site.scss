@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: $font-secondary;
     background-color: $color-bg-white;
     color: $color-black;
     margin: 0;

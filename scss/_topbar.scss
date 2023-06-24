@@ -1,143 +1,115 @@
 @mixin mq($bp: $bp-medium, $bp-width: min-width) {
-  @media all and ($bp-width: $bp) {
-    @content;
-  }
+    @media all and ($bp-width: $bp) {
+        @content;
+    }
 }
 
 // revisar estos colores de abajo
 a {
-  text-decoration: none;
-  color: $color-black;
+    text-decoration: none;
+    color: $color-black;
 }
 
 a:visited {
-  color: $color-black;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .topbar {
-  display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-
-  margin: 0;
-  background-color: $color-bg-beige;
-  border-bottom: 2px $color-black solid;
-
-  list-style: none;
-  text-transform: uppercase;
-  border-bottom: 2px $color-black solid;
-
-  font-size: $font-size-small;
-  z-index: 3
-}
-
-
-
-
-.topbar--mobile {
-  justify-content: space-between;
-  align-items: center;
-  padding: .8rem 2rem;
-
-  &__menu {
-    font-size: $font-size-small;
+    background-color: $color-beige;
     border: none;
-    padding: 0;
-  }
+    border-bottom: 2px solid $color-black;
+    padding: 2rem 0;
+    text-transform: uppercase;
+    font-size: 1.6rem;
 
-  &__logo {
-    flex-grow: 1;
-  }
-
-  &__cart {
-    
-  }
-
-  &__nav {
     display: flex;
-    flex-direction: column;
-    background-color: $color-bg-green;
-    opacity: 0.95;
-    color: $color-black;
-    
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
 
-    list-style: none;
-    text-align: center;
-    padding: 2.8rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 
-    position: absolute;
-    inset: 0 0 auto 0;
-    width: $vw-100;
-    height: $vh-100;
+    &__left {
+        display: flex;
+        align-items: center;
+        width: calc(50% + 2.8rem);
+        justify-content: space-between;
 
-    transition: all .4s ease;
+        @include mq($bp-medium) {
+            flex-direction: row-reverse;
+            width: calc(50% + (35.2844rem / 2));
+        }
 
+        &__input {
+            cursor: pointer;
+            border: none;
+            background-color: transparent;
+            font-family: $font-secondary;
+            font-size: 1.6rem;
 
+            margin-left: 2rem;
+            height: 2rem;
 
-    &__item {
-      padding: 3.2rem 0;
-      font-size: $font-size-uppermedium;
-      font-weight: $font-weight-light;
+            @include mq($bp-medium) {
+                display: none;
+            }
+        }
 
-      &:hover {
-        font-style: italic;
-        font-weight: $font-weight-bold;
-      }
+        &__logo {
+
+            @include mq($bp-medium) {
+                margin-left: 2rem;
+            }
+        }
+
+        &__nav {
+            display: flex;
+            flex-direction: column;
+            gap: 2.8rem;
+            background-color: $color-green;
+            opacity: 0.95;
+            color: $color-black;
+            justify-content: center;
+            align-items: center;
+
+            position: absolute;
+            inset: 0 0 auto 0;
+            width: 100vw;
+            height: 100vh;
+
+            @include mq($bp-medium) {
+                flex-direction: row;
+                background-color: $color-beige;
+                position: static;
+                inset: auto;
+                width: auto;
+                height: auto;
+            }
+        }
     }
 
-    
-  }
+    &__right {
 
-  @include mq($bp-medium) {
-    //min width 768
-    display: none;
-  }
+        &__cart {
+            margin-right: 2rem;
+        }
+    }
 }
 
 
 
-
-
-.topbar--desktop {
-  justify-content: space-between;
-  padding: 1.6rem 4rem;
-  align-items: center;
-
-
-  @include mq($bp-large) {
-    //min width 1440
-    padding: 1.6rem 8rem;
-  }
-
-  @include mq($bp-xlarge) {
-    //min width 1920
-    padding: 1.6rem 10rem;
-  }
-
-  @include mq(767px, max-width) {
-    //max width 767
-    display: none;
-  }
-
-  &__nav {
-    display: flex;
-    justify-content: space-between;
-    gap: 4rem;
-
-    list-style: none;
-    padding-left: 0;
-    
-  }
-
-}
 
 // Clases para js del menú desplegable
 
 .jsHide {
-  // display: none;
-  left: -100%;
+    // display: none;
+    left: -100%;
 }

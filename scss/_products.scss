@@ -261,10 +261,15 @@
 .woocommerce div.product .product_title {
   /* H1 del producto */
   padding: 4rem 0 2rem;
+
+  @include mq($bp-medium) {
+    padding: 0 0 2rem;
+  }
 }
 
-.woocommerce-product-details__short-description {
+.woocommerce-product-details__short-description > p {
   /* P descripción */
+  font-family: $font-secondary;
   font-size: $font-size-lowermedium;
   font-weight: $font-weight-light;
 
@@ -272,6 +277,17 @@
     /* Precio */
     padding: 4rem 0;
   }
+}
+
+.input-text {
+  /* Elimina campo de num de productos */
+  display: none;
+}
+
+form.cart {
+  /* Margen superior al btn */
+  margin-top: 4rem;
+
 }
 
 
